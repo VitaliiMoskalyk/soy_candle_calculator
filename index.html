@@ -31,10 +31,17 @@
     
         <form class="was-validated" style="max-width: 300px;">
         <div class="mb-3">
-          <label for="jar" class="form-label">Об'єм тари, мл</label>
+          <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
           <input id="jar" type="number" min=10 max=1000 step=1 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" required>
           <div  class="invalid-feedback">
             Введіть об'єм вашої тари від 10 мл до 1000 мл
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="jar-amount" class="form-label">Яка кількість тари, шт</label>
+          <input id="jar-amount" type="number" value=1 min=1 max=100 step=1 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" required>
+          <div  class="invalid-feedback">
+            Введіть кількість тари від 1 шт до 100 шт
           </div>
         </div>
         <div class="mb-3">
@@ -62,8 +69,8 @@
 
       <thead>
         <tr>
-            <th scope="col">Об'єм тари, мл</th>
-            <th scope="col">Інтенсивність аромату, %</th>
+            <th scope="col">Тара</th>
+            <th scope="col">Інтенсивність аромату</th>
             <th scope="col">Відносна густина аромату</th>
           </tr>
         </thead>  
@@ -77,9 +84,9 @@
           </tbody>
         <thead>
         <tr>
-          <th scope="col">Об'єм аромату, мл</th>
-          <th scope="col">Вага аромату, г</th>
-          <th scope="col">Вага воску, г</th>
+          <th scope="col">Об'єм аромату</th>
+          <th scope="col">Вага аромату</th>
+          <th scope="col">Вага воску</th>
         </tr>
       </thead>
       <tbody>
