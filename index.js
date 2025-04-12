@@ -4,6 +4,7 @@ const intense=document.getElementById("intense");
 const s=document.getElementById("s");
 const calculate=document.getElementById("calculate");
 const table=document.getElementById('table');
+const waxGravity=document.getElementById('floatingSelectGrid');
 
 
 const isInAverage=(el)=>{
@@ -20,9 +21,9 @@ if(isInAverage(jar)&&isInAverage(intense)&&isInAverage(s)&&isInAverage(jar_amoun
     document.getElementById('intense-value').textContent=parseFloat(intense.value).toFixed(2) +" %";
     document.getElementById('s-value').textContent=parseFloat(s.value).toFixed(3);
 
-    document.getElementById('v-value').textContent=(((jar.value*jar_amount.value*(1-intense.value/100))*0.86*intense.value/100/s.value)).toFixed(2) + " мл";
-    document.getElementById('m-value').textContent=(((jar.value*(1-intense.value/100))*0.86*intense.value/100)*jar_amount.value).toFixed(2)+" г";
-    document.getElementById('wax-value').textContent=(((jar.value*(1-intense.value/100))*0.86)*jar_amount.value).toFixed(2)+" г";
+    document.getElementById('v-value').textContent=(((jar.value*jar_amount.value*(1-intense.value/100))*waxGravity.value*intense.value/100/s.value)).toFixed(2) + " мл";
+    document.getElementById('m-value').textContent=(((jar.value*(1-intense.value/100))*waxGravity.value*intense.value/100)*jar_amount.value).toFixed(2)+" г";
+    document.getElementById('wax-value').textContent=(((jar.value*(1-intense.value/100))*waxGravity.value)*jar_amount.value).toFixed(2)+" г";
 }
 else{
 table.style.visibility='hidden'

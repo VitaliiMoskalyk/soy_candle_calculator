@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <div class="container-sm ">
+    <div class="container-sm" style="margin-top: 1em;">
         <div  class="noprint">
         <h1>Як розрахувати вагу соєвого воску та ароматичної олії для свічки</h1>
             <p>Якщо ви виготовляєте свічки власноруч, вам може знадобитися точний розрахунок кількості воску. Найпростіший спосіб визначити, скільки соєвого воску потрібно для заповнення форми, — це використати воду. У цій статті розповім, як правильно це зробити. Також цей розрахунок побудований на методі розрахунку, при якому кількість ароматичної олії визначаєься саме від маси воску.</p>
@@ -28,8 +28,21 @@
                 <li>Деякі виробники ароматичних олій вказують відносну густину олії при порівнянні з густиною води. Наприклад, у виробника CandleScience це вказано у таблиці Safety Data Sheet і називається Specific gravity (H2O=1). Якщо відома відносна густина ароматичної олії - для більш точних розрахунків також вкажіть її. Якщо не відома - то у середньому її величина складає 0,9-1.</li>
                 <li>Внесіть отримані дані у калькулятор нижче та натисніть "Розрахувати":</li>
             </ol>
-    
+            
         <form class="was-validated" style="max-width: 300px;">
+          <div class="mb-3" >
+            <label for="floatingSelectGrid" class="form-label">Вид воску</label>
+            <div class="" >
+              
+              <select class="form-select"  id="floatingSelectGrid">
+                <option selected value="0.86">NatureWax® C-3</option>
+                <option value="0.9">KeraSoy Pillar 4120</option>
+                <option value="0.9">KeraSoy Container 4130</option>
+         
+              </select>
+          
+            </div>
+          </div>
         <div class="mb-3">
           <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
           <input id="jar" type="number" min=10 max=1000 step=1 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" required>
@@ -46,14 +59,14 @@
         </div>
         <div class="mb-3">
             <label for="intense" class="form-label">Інтенсивність аромату, %</label>
-            <input id="intense" type="number" min=1 max=30 step=1 class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" required>
+            <input id="intense" type="number" min=1 max=30 step=0.1 class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" required>
             <div class="invalid-feedback">
                 Введіть бажану/рекомендовану інтенсивність вводу віддушки від 1 % до 30 %.
             </div>
           </div>
           <div class="mb-3">
             <label for="s" class="form-label">Відносна густина аромату</label>
-            <input id="s" type="number" min=0.5 max=1.9 step=0.001 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" value="0.98" required>
+            <input id="s" type="number" min=0.5 max=1.9 step=0.000001 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" value="0.98" required>
             <div class="invalid-feedback">
                 Введіть відносну густину віддушки ( не знаєте - вкажіть 0,98 )
             </div>
@@ -65,7 +78,7 @@
     </div>
 <div id="table" style="visibility: hidden;">
     <h2 style="margin-top: 4rem;" class="noprint">Вітаю! Роздрукуйте або запишіть усі необхідні дані для виготовлення найгарнішої свічки:</h2>
-  <table  class="table table-striped" style="margin-top: 2rem;" >
+  <table  class="table table-striped" style="margin-top: 2rem;margin-bottom:2rem;" >
 
       <thead>
         <tr>
