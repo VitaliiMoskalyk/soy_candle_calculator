@@ -15,8 +15,12 @@ const isInAverage=(el)=>{
  calculate.addEventListener('click',()=>getCalculatedData());
 
  const getCalculatedData=()=>{
+    
 if(isInAverage(jar)&&isInAverage(intense)&&isInAverage(s)&&isInAverage(jar_amount)){
-    table.style.visibility='visible';
+    // table.style.visibility='visible';
+    // myModal.addEventListener('shown.bs.modal', () => {
+    //     myInput.focus()
+    //   })
     document.getElementById('jar-value').textContent=parseFloat(jar.value).toFixed(1)+" мл"+" * "+jar_amount.value+" шт";
     document.getElementById('intense-value').textContent=parseFloat(intense.value).toFixed(2) +" %";
     document.getElementById('s-value').textContent=parseFloat(s.value).toFixed(3);
@@ -26,6 +30,22 @@ if(isInAverage(jar)&&isInAverage(intense)&&isInAverage(s)&&isInAverage(jar_amoun
     document.getElementById('wax-value').textContent=(((jar.value*(1-intense.value/100))*waxGravity.value)*jar_amount.value).toFixed(2)+" г";
 }
 else{
-table.style.visibility='hidden'
+
 }
 }
+
+const form=document.getElementById('form');
+
+
+Array.from(form).forEach(f=>f.addEventListener('input',event=>{
+   
+    
+    if(f.validity.valid&&Array.from(form).every(r=>r.validity.valid)){
+        calculate.disabled=false;
+       
+    }
+    else{
+        calculate.disabled=true;
+    }
+}))
+
