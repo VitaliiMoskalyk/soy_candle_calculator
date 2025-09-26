@@ -6,7 +6,25 @@ const calculate=document.getElementById("calculate");
 const table=document.getElementById('table');
 const waxGravity=document.getElementById('floatingSelectGrid');
 
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
 
+      // Підсвічування активної сторінки
+      const current = location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach(link => {
+        const linkHref = link.getAttribute("href");
+        if (linkHref === current) {
+          link.classList.add("active");
+        }
+      });
+    })
+    .catch(err => console.error("Помилка завантаження header:", err));
+});
 const isInAverage=(el)=>{
     let toNumber=parseFloat(el.value);
     return (toNumber<=el.max&&toNumber>=el.min)?el.value:false;
