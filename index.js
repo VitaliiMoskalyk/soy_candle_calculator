@@ -4,6 +4,7 @@ const intense=document.getElementById("intense");
 const s=document.getElementById("s");
 const calculate=document.getElementById("calculate");
 const table=document.getElementById('table');
+
 const waxGravity=document.getElementById('floatingSelectGrid');
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -39,13 +40,36 @@ if(isInAverage(jar)&&isInAverage(intense)&&isInAverage(s)&&isInAverage(jar_amoun
     // myModal.addEventListener('shown.bs.modal', () => {
     //     myInput.focus()
     //   })
-    document.getElementById('jar-value').textContent=parseFloat(jar.value).toFixed(1)+" мл"+" * "+jar_amount.value+" шт";
-    document.getElementById('intense-value').textContent=parseFloat(intense.value).toFixed(2) +" %";
-    document.getElementById('s-value').textContent=parseFloat(s.value).toFixed(3);
+        let V_c = parseFloat(jar.value); // Обʼєм одиниці тари (мл)
+        let jarCount = parseFloat(jar_amount.value); // Кількість тари
+        let f = parseFloat(intense.value) / 100; // Частка аромату (у відсотках)
+        let rho_w = parseFloat(waxGravity.value); // Щільність воску (г/мл)
+        let rho_f = parseFloat(s.value); // Щільність аромату (г/мл)
 
-    document.getElementById('v-value').textContent=(((jar.value*jar_amount.value*(1-intense.value/100))*waxGravity.value*intense.value/100/s.value)).toFixed(2) + " мл";
-    document.getElementById('m-value').textContent=(((jar.value*(1-intense.value/100))*waxGravity.value*intense.value/100)*jar_amount.value).toFixed(2)+" г";
-    document.getElementById('wax-value').textContent=(((jar.value*(1-intense.value/100))*waxGravity.value)*jar_amount.value).toFixed(2)+" г";
+            // Загальний обʼєм для всіх одиниць тари
+        let V_total = V_c * jarCount;
+
+        // === Класична формула ===
+        // Масса воску на весь обʼєм
+        let m_w_total = V_total / ( (1 / rho_w) + (f / rho_f) );
+
+        // Масса аромату
+        let m_f_total = f * m_w_total;
+
+        // Обʼєм аромату
+        let V_f_total = m_f_total / rho_f;
+
+
+        // === Вивід у таблицю ===
+        document.getElementById('jar-value').textContent = V_c.toFixed(1) + " мл" + " * " + jarCount + " шт";
+        document.getElementById('intense-value').textContent = (f * 100).toFixed(2) + " %";
+        document.getElementById('s-value').textContent = rho_f.toFixed(3);
+
+        document.getElementById('v-value').textContent = V_f_total.toFixed(2) + " мл";
+        document.getElementById('m-value').textContent = m_f_total.toFixed(2) + " г";
+        document.getElementById('wax-value').textContent = m_w_total.toFixed(2) + " г";
+
+    
 }
 else{
 
