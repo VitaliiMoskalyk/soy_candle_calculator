@@ -35,112 +35,97 @@
                 <li>Внесіть отримані дані у калькулятор нижче та натисніть "Розрахувати":</li>
             </ol>
             
-        <form id='form' class="was-validated" style="max-width: 300px;">
-          <div class="mb-3" >
-            <label for="floatingSelectGrid" class="form-label">Вид воску</label>
-            <div class="" >
-              
-              <select class="form-select"  id="floatingSelectGrid">
-                <option selected value="0.86">NatureWax® C-3</option>
-                <option value="0.9">KeraSoy Pillar 4120</option>
-                <option value="0.9">KeraSoy Container 4130</option>
-         
-              </select>
-          
-            </div>
-          </div>
-        <div class="mb-3">
-          <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
-          <input id="jar" inputmode="number" type="number" min=10 max=1000 step=1 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" >
-          <div  class="invalid-feedback">
-            Введіть об'єм вашої тари від 10 мл до 1000 мл
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="jar-amount" class="form-label">Яка кількість тари, шт</label>
-          <input id="jar-amount" type="number" value=1 min=1 max=100 step=1 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" >
-          <div  class="invalid-feedback">
-            Введіть кількість тари від 1 шт до 100 шт
-          </div>
-        </div>
-        <div class="mb-3">
-            <label for="intense" class="form-label">Інтенсивність аромату, %</label>
-            <input id="intense" type="number" min=1 max=30 step=0.1 class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" >
-            <div class="invalid-feedback">
-                Введіть бажану/рекомендовану інтенсивність вводу віддушки від 1 % до 30 %.
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="s" class="form-label">Відносна густина аромату</label>
-            <input id="s" type="number" min=0.5 max=1.9 step=0.000001 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required   placeholder="" value="0.98" >
-            <div class="invalid-feedback">
-                Введіть відносну густину віддушки ( не знаєте - вкажіть 0,98 )
-            </div>
-          </div>
-        <div class="mb-3">
-          <button id="calculate" disabled data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" type="button" >Розрахувати</button>
-        </div>
-      </form>
-    </div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Роздрукуйте або запишіть усі необхідні дані для виготовлення найгарнішої свічки:</h1>
-        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Калькулятор -->
+    <form id="form" class="was-validated" style="max-width: 300px;">
+      <div class="mb-3">
+        <label for="floatingSelectGrid" class="form-label">Вид воску</label>
+        <select class="form-select" id="floatingSelectGrid">
+          <option selected value="0.86">NatureWax® C-3</option>
+          <option value="0.9">KeraSoy Pillar 4120</option>
+          <option value="0.9">KeraSoy Container 4130</option>
+        </select>
       </div>
-      <div class="modal-body">
-       <!--<h2 style="margin-top: 4rem;" class="noprint">Вітаю! Роздрукуйте або запишіть усі необхідні дані для виготовлення найгарнішої свічки:</h2>--> 
-  <table  class="table table-striped" style="margin-top: 2rem;margin-bottom:2rem;" >
-
-      <thead>
-        <tr>
-            <th scope="col">Тара</th>
-            <th scope="col">Інтенсивність аромату</th>
-            <th scope="col">Відносна густина аромату</th>
-          </tr>
-        </thead>  
-        <tbody>
-            <tr>
-              <td id="jar-value"></td>
-              <td id="intense-value"></td>
-              <td id="s-value"></td>
-            </tr>
-           
-          </tbody>
-        <thead>
-        <tr>
-          <th scope="col">Об'єм аромату</th>
-          <th scope="col">Вага аромату</th>
-          <th scope="col">Вага воску</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-    
-          <td id="v-value"></td>
-          <td id="m-value"></td>
-          <td id="wax-value"></td>
-        </tr>
-      </tbody> 
-  </table>
+      <div class="mb-3">
+        <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
+        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" required>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-<!--<button type="button" class="btn btn-primary">Save changes</button>-->        
+      <div class="mb-3">
+        <label for="jar-amount" class="form-label">Яка кількість тари, шт</label>
+        <input id="jar-amount" type="number" value="1" min="1" max="100" step="1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="intense" class="form-label">Інтенсивність аромату, %</label>
+        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="s" class="form-label">Відносна густина аромату</label>
+        <input id="s" type="number" min="0.5" max="1.9" step="0.000001" class="form-control" value="0.98" required>
+      </div>
+      <div class="mb-3">
+        <button id="calculate" disabled  class="btn btn-primary" type="button">Розрахувати</button>
+      </div>
+    </form>
+
+    <!-- Результаты в модальном окне -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Результати розрахунку</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Тара</th>
+                  <th>Інтенсивність аромату</th>
+                  <th>Відносна густина аромату</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="jar-value"></td>
+                  <td id="intense-value"></td>
+                  <td id="s-value"></td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>Об'єм аромату</th>
+                  <th>Вага аромату</th>
+                  <th>Вага воску</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="v-value"></td>
+                  <td id="m-value"></td>
+                  <td id="wax-value"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрити</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-    
-
-    
-
+<!-- Toast для уведомления о необходимости авторизации -->
+<div class="position-fixed bottom-0 start-0 p-3" style="z-index: 1080;">
+  <div id="authToast" class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Для виконання розрахунку потрібно увійти в систему.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-  <script src="./index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </div>
+</div>
+  <!-- Firebase и JS -->
+  <script type="module" src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
