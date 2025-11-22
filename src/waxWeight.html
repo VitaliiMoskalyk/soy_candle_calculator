@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/head.html',{
+	"title":"Калькулятор розрахунку воску для соєвих свічок"
+	})
+	<body>
+		@@include('html/header.html',{})
+		<main>
+
+
+    <div class="container-sm" style="margin-top: 1em;">
+        <div  class="noprint">
+        <h1>Як розрахувати вагу соєвого воску та ароматичної олії для свічки</h1>
+            <p>Якщо ви виготовляєте свічки власноруч, вам може знадобитися точний розрахунок кількості воску. Найпростіший спосіб визначити, скільки соєвого воску потрібно для заповнення форми, — це використати воду. У цій статті розповім, як правильно це зробити. Це класичний метод розрахунку кількості воску та аромату, який використовується у свічковарінні, і він базується на стандартних рекомендаціях виробників воску та ароматичних олій. Формула використовується у професійному свічковарінні (це підтверджено в документаціях CandleScience, Lone Star Candle Supply та ін.).</p>
+            <h2>Що знадобиться?</h2>
+            <ul>
+            <li>Ємність, у яку буде заливатися розплавлений віск</li>
+            <li>Вода</li>
+            <li>Ваги</li>
+            </ul>
+
+            <h2>Покрокова інструкція</h2>
+            <ol>
+                <li>Заповніть ємність майбутньої свічки водою до бажаного рівня, який має займати віск.</li>
+                <li>Вилийте воду з ємності в мірний стакан і визначте її об'єм у мілілітрах (мл). Якщо мірного стакана немає, можна зважити воду (1 мл = 1 грам води). Не забудьте обнулити вагу тари на вагах, щоб зважити тільки воду без ємності.</li>
+                <li>Визначте, який відсоток ароматичної олії ви бажаєте додати у свічку. Кожна олія має рекомендації щодо відсотка вводу, але як правило, це у межах 3-12% від маси воску.</li>
+                <li>Деякі виробники ароматичних олій вказують відносну густину олії при порівнянні з густиною води. Наприклад, у виробника CandleScience це вказано у таблиці Safety Data Sheet і називається Specific gravity (H2O=1). Якщо відома відносна густина ароматичної олії - для більш точних розрахунків також вкажіть її. Якщо не відома - то у середньому її величина складає 0,9-1.</li>
+                <li>Внесіть отримані дані у калькулятор нижче та натисніть "Розрахувати":</li>
+            </ol>
+            
+        <!-- Калькулятор -->
+    <form id="form" class="was-validated" style="max-width: 300px;">
+      <div class="mb-3">
+        <label for="floatingSelectGrid" class="form-label">Вид воску</label>
+        <select class="form-select" id="floatingSelectGrid">
+          <option selected value="0.86">NatureWax® C-3</option>
+          <option value="0.9">KeraSoy Pillar 4120</option>
+          <option value="0.9">KeraSoy Container 4130</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
+        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="jar-amount" class="form-label">Яка кількість тари, шт</label>
+        <input id="jar-amount" type="number" value="1" min="1" max="100" step="1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="intense" class="form-label">Інтенсивність аромату, %</label>
+        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="s" class="form-label">Відносна густина аромату</label>
+        <input id="s" type="number" min="0.5" max="1.9" step="0.000001" class="form-control" value="0.98" required>
+      </div>
+      <div class="mb-3">
+        <button id="calculate" disabled  class="btn btn-primary" type="button">Розрахувати</button>
+      </div>
+    </form>
+
+    <!-- Результаты в модальном окне -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Результати розрахунку</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Тара</th>
+                  <th>Інтенсивність аромату</th>
+                  <th>Відносна густина аромату</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="jar-value"></td>
+                  <td id="intense-value"></td>
+                  <td id="s-value"></td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th>Об'єм аромату</th>
+                  <th>Вага аромату</th>
+                  <th>Вага воску</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="v-value"></td>
+                  <td id="m-value"></td>
+                  <td id="wax-value"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрити</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Toast для уведомления о необходимости авторизации -->
+<div class="position-fixed bottom-0 start-0 p-3" style="z-index: 1080;">
+  <div id="authToast" class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Для виконання розрахунку потрібно увійти в систему.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+ </main>
+		@@include('html/footer.html',{})
+
+		<script type="module" src="js/app.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	</body>
+</html>

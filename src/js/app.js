@@ -1,11 +1,20 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+// import * as flsFunctions from "./modules/functions.js";
+
+// flsFunctions.isWebp();
+
+/*
+import Swiper, { Navigation, Pagination } from 'swiper';
+const swiper = new Swiper();
+*/
+
+import { initializeApp } from "firebase/app";
 import {
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signOut
-} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+} from "firebase/auth";
 
 // ===== Firebase config =====
 const firebaseConfig = {
@@ -22,14 +31,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // ===== Основной код =====
-document.addEventListener("DOMContentLoaded", async () => {
-  // === Загружаем header ===
-  try {
-    const res = await fetch("header.html");
-    document.getElementById("header").innerHTML = await res.text();
-  } catch (err) {
-    console.warn("Не удалось загрузить header:", err);
-  }
 
   // === DOM элементы ===
   const loginForm = document.getElementById("loginForm");
@@ -157,4 +158,4 @@ document.addEventListener("DOMContentLoaded", async () => {
       new bootstrap.Modal(modalEl).show();
     }
   });
-});
+
