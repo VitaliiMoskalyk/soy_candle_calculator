@@ -1,5 +1,6 @@
 {
 	"name": "gulp-2022",
+	"homepage": "https://VitaliiMoskalyk.github.io/soy_candle_calculator",
 	"version": "1.0.0",
 	"description": "",
 	"main": "gulpfile.js",
