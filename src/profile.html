@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+	@@include('html/head.html',{
+	"title":"Кабінет"
+	})
+	<body>
+		@@include('html/header.html',{})
+		<main>
+
+
+    <div class="container-sm table-responsive" style="margin-top: 1em;">
+        <table id="historyTable" class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Тара</th>
+      <th>Вид воску</th>
+      <th>% аромату</th>
+      <th>Аромат</th>
+      <th>Об'єм аромату</th>
+      <th>Вага аромату</th>
+      <th>Вага воску</th>
+      <th>Нотатки</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+    </div>
+
+
+    </main>
+		@@include('html/footer.html',{})
+
+		<script type="module" src="js/app.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	</body>
+</html>
