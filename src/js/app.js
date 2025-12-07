@@ -53,20 +53,45 @@ const db = getFirestore();
   let userLoggedIn = false;
 
   // === Слежение за авторизацией ===
-  onAuthStateChanged(auth, (user) => {
+  onAuthStateChanged(auth, async (user) => {
     userLoggedIn = !!user;
     if (user) {
       userInfo.style.display = "flex";
       loginBtn.style.display = "none";
       logoutBtn.style.display = "block";
       userEmailSpan.textContent = user.email;
-    } else {
-      userInfo.style.display = "none";
-      loginBtn.style.display = "inline-block";
-      logoutBtn.style.display = "none";
-      userEmailSpan.textContent = "";
-    }
-  });
+      const ref = doc(db, "users", user.uid);
+      const snap = await getDoc(ref);
+
+      if (!snap.exists()) return;
+
+      const data = snap.data();
+
+      if (Array.isArray(data.history)&&tableBody) {
+        renderTable(data.history);
+      }
+        } else {
+          userInfo.style.display = "none";
+          loginBtn.style.display = "inline-block";
+          logoutBtn.style.display = "none";
+          userEmailSpan.textContent = "";
+        }
+      });
+
+//   onAuthStateChanged(auth, async (user) => {
+//   if (!user) return;
+
+//   const ref = doc(db, "users", user.uid);
+//   const snap = await getDoc(ref);
+
+//   if (!snap.exists()) return;
+
+//   const data = snap.data();
+
+//   if (Array.isArray(data.history)&&tableBody) {
+//     renderTable(data.history);
+//   }
+// });
 
   // === Универсальная функция входа/регистрации ===
   async function handleAuth(email, password) {
@@ -184,20 +209,7 @@ await setDoc(doc(db, "users", user.uid), {
 
   
 
-onAuthStateChanged(auth, async (user) => {
-  if (!user) return;
 
-  const ref = doc(db, "users", user.uid);
-  const snap = await getDoc(ref);
-
-  if (!snap.exists()) return;
-
-  const data = snap.data();
-
-  if (Array.isArray(data.history)&&tableBody) {
-    renderTable(data.history);
-  }
-});
 
 function renderTable(history) {
   tableBody.innerHTML = ""; // очищаем
@@ -269,3 +281,5 @@ async function saveEditedCell(e) {
 
   await updateDoc(ref, { history: data.history });
 }
+
+
