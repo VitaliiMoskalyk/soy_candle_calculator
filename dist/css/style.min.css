@@ -1,1 +1,8 @@
-#header{border-bottom:1px solid grey}@media print{.noprint{display:none!important}}
+@media print {
+  .noprint {
+    display: none !important;
+  }
+}
+#header {
+  border-bottom: 1px solid grey;
+}

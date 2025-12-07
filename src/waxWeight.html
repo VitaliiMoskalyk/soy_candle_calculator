@@ -74,64 +74,10 @@
     </form>
 
     <!-- Результаты в модальном окне -->
-    <div class="modal fade" id="exampleModal" tabindex="-1">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Результати розрахунку</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Тара</th>
-                  <th>Інтенсивність аромату</th>
-                  <th>Відносна густина аромату</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td id="jar-value"></td>
-                  <td id="intense-value"></td>
-                  <td id="s-value"></td>
-                </tr>
-              </tbody>
-              <thead>
-                <tr>
-                  <th>Об'єм аромату</th>
-                  <th>Вага аромату</th>
-                  <th>Вага воску</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td id="v-value"></td>
-                  <td id="m-value"></td>
-                  <td id="wax-value"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-			<button type="submit" id="dataSubmit" class="btn btn-success" data-bs-dismiss="modal">Зберегти розрахунок</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрити</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    @@include('html/resultsModal.html',{})
   </div>
-<!-- Toast для уведомления о необходимости авторизации -->
-<div class="position-fixed bottom-0 start-0 p-3" style="z-index: 1080;">
-  <div id="authToast" class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="d-flex">
-      <div class="toast-body">
-        Для виконання розрахунку потрібно увійти в систему.
-      </div>
-      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-  </div>
-</div>
+
+    
 		</main>
 		@@include('html/footer.html',{})
 
