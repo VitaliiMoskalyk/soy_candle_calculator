@@ -159,51 +159,59 @@ await setDoc(doc(db, "users", user.uid), {
 
 
   // === Кнопка "Розрахувати" ===
- 
+ let resultData = null;
   calculate?.addEventListener("click",() => {
-     let result = null;
+     
     if (!validateForm()) return;
 
-    if (!userLoggedIn) {
-      toastText.textContent=`Для виконання розрахунку потрібно увійти в систему.`;
-      authToast?.show()
-    } else {
-       result=getCalculatedData();
+    else {
+      
+       resultData=getCalculatedData();
+   
     
-      document.getElementById("intense-value").textContent = `${result.intense} %`;
-      document.getElementById("s-value").textContent = result.gravity;
-      document.getElementById("v-value").textContent = result.scentValue + " мл";
-      document.getElementById("m-value").textContent = result.scentWeight + " г";
-      document.getElementById("wax-value").textContent = result.waxWeight + " г";
-      document.getElementById("jar-value").textContent = `${result.jarValue} мл * ${result.jarAmount} шт`;
+      document.getElementById("intense-value").textContent = `${resultData.intense} %`;
+      document.getElementById("s-value").textContent = resultData.gravity;
+      document.getElementById("v-value").textContent = resultData.scentValue + " мл";
+      document.getElementById("m-value").textContent = resultData.scentWeight + " г";
+      document.getElementById("wax-value").textContent = resultData.waxWeight + " г";
+      document.getElementById("jar-value").textContent = `${resultData.jarValue} мл * ${resultData.jarAmount} шт`;
 
       const modalEl = document.getElementById("exampleModal");
       new bootstrap.Modal(modalEl).show();
-      const dataSubmit = document.getElementById('dataSubmit');
+  
+            return resultData;
+        }
+  });
 
-        dataSubmit.addEventListener('click', async () => {
+    const dataSubmit = document.getElementById('dataSubmit');
+
+        dataSubmit?.addEventListener('click', async () => {
         const user = auth.currentUser;
+
+        if (!userLoggedIn) {
+          toastText.textContent=`Для збереження розрахунку потрібно увійти в систему.`;
+          authToast?.show();
+        
+          return};
+        
         if (!user) return;
 
-        if (!result) return;
-
-        await setDoc(
+        else{    
+                  await setDoc(
             doc(db, "users", user.uid),
             { history: arrayUnion({
 
-            result: result
+            result: resultData
         })},
             { merge: true }
         );
 
       toastText.textContent=`Розрахунок збережено`;
-      authToast?.show()
-        });
-            
+      authToast?.show();
+      
         }
-  });
 
-
+        });
 
 
 
