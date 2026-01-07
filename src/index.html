@@ -11,7 +11,7 @@
     <div class="container-sm" style="margin-top: 1em;">
         <div  class="noprint">
           
-        <h1 >Як розрахувати вагу соєвого воску та ароматичної олії для свічки</h1>
+        <h1 >Калькулятор розрахунку воску та аромаолії для свічок</h1>
             <div class="visually-hidden">
         <p>Якщо ви виготовляєте свічки власноруч, вам може знадобитися точний розрахунок кількості воску. Найпростіший спосіб визначити, скільки соєвого воску потрібно для заповнення форми, - це використати воду. У цій статті розповім, як правильно це зробити. Це класичний метод розрахунку кількості воску та аромату, який використовується у свічковарінні, і він базується на стандартних рекомендаціях виробників воску та ароматичних олій. Формула використовується у професійному свічковарінні (це підтверджено в документаціях CandleScience, Lone Star Candle Supply та ін.).</p>
             <h2>Що знадобиться?</h2>
@@ -45,7 +45,9 @@
             </ol>
             </div>
         <!-- Калькулятор -->
-    <form id="form" class="was-validated" style="max-width: 300px;">
+        <div style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;gap: 1em; margin-top: 3em; margin-bottom: 1em;">
+
+          <form id="form" class="was-validated " style="max-width: 300px; width: 100%;">
       
       <div class="mb-3">
         <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
@@ -90,6 +92,16 @@
         <button id="calculate" disabled  class="btn btn-primary" type="button">Розрахувати</button>
       </div>
     </form>
+   
+
+
+
+
+  <img src="img/candleMaking.png" style="max-width: 400px;" width="50%" class="img-fluid rounded" alt="Обложка" />
+
+        </div>
+    
+
 
     <!-- Результаты в модальном окне -->
     @@include('html/resultsModal.html',{})

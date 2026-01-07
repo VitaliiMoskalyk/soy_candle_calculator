@@ -16,7 +16,8 @@
 	"license": "ISC",
 	"dependencies": {
 		"firebase": "^12.6.0",
-		"gulp-cli": "^2.3.0"
+		"gulp-cli": "^2.3.0",
+		"imagemin-pngquant": "^10.0.0"
 	},
 	"devDependencies": {
 		"browser-sync": "latest",
@@ -28,7 +29,7 @@
 		"gulp-fonter-fix": "latest",
 		"gulp-group-css-media-queries": "latest",
 		"gulp-if": "latest",
-		"gulp-imagemin": "latest",
+		"gulp-imagemin": "^9.2.0",
 		"gulp-newer": "latest",
 		"gulp-notify": "latest",
 		"gulp-plumber": "latest",
@@ -44,6 +45,10 @@
 		"gulp-webp-html-nosvg": "latest",
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
+		"imagemin-gifsicle": "^7.0.0",
+		"imagemin-mozjpeg": "^10.0.0",
+		"imagemin-optipng": "^8.0.0",
+		"imagemin-svgo": "^11.0.1",
 		"sass": "latest",
 		"swiper": "latest",
 		"vinyl-ftp": "latest",
