@@ -43,7 +43,8 @@
             </ol>
             
         <!-- Калькулятор -->
-    <form id="form" class="was-validated" style="max-width: 300px;">
+        <div style="display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;gap: 1em; margin-top: 3em; margin-bottom: 1em;">
+    <form id="form" class="was-validated" style="max-width: 400px;width: 100%;">
       <div class="mb-3">
         <label for="floatingSelectGrid" class="form-label">Вид воску</label>
         <select class="form-select" id="floatingSelectGrid">
@@ -72,7 +73,9 @@
         <button id="calculate" disabled  class="btn btn-primary" type="button">Розрахувати</button>
       </div>
     </form>
+  <img src="img/odesaCandle.png" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Обложка" />
 
+    </div>
     <!-- Результаты в модальном окне -->
     @@include('html/resultsModal.html',{})
   </div>
