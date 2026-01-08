@@ -5,14 +5,14 @@
   "description":"Таблиця відповідності фітилів CD (Stabilo), ECO та LX для соєвих свічок. Допомога у виборі правильного фітиля залежно від діаметра контейнера.",
   "keywords":"фітилі для свічок, відповідність фітилів, CD Stabilo, ECO, LX, соєві свічки, вибір фітиля"
 	})
-	<body>
+	<body class="d-flex flex-column min-vh-100">
 		@@include('html/header.html',{})
 		<main>
 
 
     <div class="container-sm " style="margin-top: 1em;">
 
-<table class="table table-sm table-striped table-hover caption-top" style="max-width: fit-content;">
+<!--<table class="table table-sm table-striped table-hover caption-top" style="max-width: fit-content;">
   <caption>
     Соответствие фитилей для соевого воска: CD (Stabilo) ↔ ECO ↔ LX
   </caption>
@@ -133,13 +133,78 @@
       <td>80–82</td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
+
+<div class="table-responsive">
+  <table class="table table-bordered text-center align-middle">
+     <caption>Інформація отримана з сайту https://www.candlescience.com/</caption>
+    <thead class="table-light">
+      <tr>
+        <th>Віск</th>
+        <th>Чайні</th>
+        <th><small>(4,45–5,56 см)</small></th>
+        <th><small>(5,59–6,83 см)</small></th>
+        <th><small>(6,86–7,47 см)</small></th>
+        <th><small>(7,49–8,36 см)</small></th>
+        <th><small>(8,38–9,63 см)</small></th>
+        <th><small>(9,65–10,67 см)</small></th>
+        <th><small>(9,65–11,43 см)</small></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- C-3 -->
+      <tr>
+        <th scope="row" rowspan="2">
+          Cargill NatureWax C-3<br>
+          <small>соєвий віск</small>
+        </th> 
+        <td>ECO1</td>
+        <td>ECO4</td>
+        <td>ECO8</td>
+        <td>ECO12</td>
+        <td>ECO14</td>
+        <td>ECO16</td>
+        <td>ECO6×2</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>CD6</td>
+        <td>CD8</td>
+        <td>CD12</td>
+        <td>CD22</td>
+        <td>CD24</td>
+        <td>CD8×2</td>
+        <td>CD4×3</td>
+      </tr>
+
+      <!-- C-6 -->
+      <tr>
+        <th scope="row" rowspan="2">
+          Cargill NatureWax C-6<br>
+          <small>соєво-кокосовий віск</small>
+        </th>
+        <td>ECO1</td>
+        <td>CD4</td>
+        <td>CD8</td>
+        <td>CD14</td>
+        <td>CD24</td>
+        <td>CD8×2</td>
+        <td>CD10×2</td>
+        <td>CD4×3</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 
     </div>
 
+
+    
     
     </main>
 		@@include('html/footer.html',{})

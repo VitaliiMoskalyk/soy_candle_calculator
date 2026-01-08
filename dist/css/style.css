@@ -1,9 +1,19 @@
-#header {
-  border-bottom: 1px solid grey;
-}
-
 @media print {
   .noprint {
     display: none !important;
   }
+}
+#header {
+  border-bottom: 1px solid grey;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
 }
