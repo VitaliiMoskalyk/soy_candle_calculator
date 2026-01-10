@@ -1,7 +1,6 @@
 // @import "fonts";
 
 
-
 @media print{
     .noprint {
       display: none !important;
@@ -11,7 +10,10 @@
 #header{
   border-bottom: 1px solid grey;
 }
-
+ .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
 .social-link {
   display: inline-flex;
   align-items: center;
@@ -21,5 +23,13 @@
 .icon {
   width: 24px;
   height: 24px;
+  fill: currentColor;
 }
 
+.note{
+
+  background-color: #ffffcc9d;
+  border-left: 4px solid #ffeb3bb7;
+  padding: 10px;
+  font-weight: 600;
+}

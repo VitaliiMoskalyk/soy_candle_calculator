@@ -12,6 +12,15 @@
       <div class="container-sm" style="margin-top: 1em;">
         <h1>Як розрахувати температуру заливки воску NatureWax® C-3</h1>
         <p>Правильна температура заливки є ключем до створення ідеальних свічок із соєвого воску NatureWax® C-3. Вона впливає на зовнішній вигляд, рівномірність охолодження та розкриття аромату. У цій статті розглянемо, як обчислити оптимальну температуру заливки залежно від умов у приміщенні. Варто зазначити, що в різних джерелах можна зустріти дещо відмінні рекомендації щодо температур — це пов’язано з особливостями воску, типом тари, ароматизаторами та навіть вологістю чи температурою у кімнаті. Тому наведені дані слід розглядати як орієнтир, а ідеальні параметри бажано підбирати експериментально для кожної партії.</p>
+
+        @@include('html/note.html',{
+          "title":"",
+           "heat_temp":"85°C",
+           "color_temp":"80°C",
+           "scent_temp":"80°C",
+           "pour_temp":"з графіку"
+         })
+
         <h2>Покрокова інструкція з сайту Cargill</h2>
           <div class="accordion mb-3" id="accordionExample2" >
         <div class="accordion-item">
@@ -22,7 +31,7 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Нагрійте пластівці воску до температури 71°C. Це оптимальна температура заливки, яка гарантує рівномірні та красиві свічки. 
+              Нагрійте пластівці воску до температури 85°C. Це оптимальна температура нагріву, яка гарантує рівномірні та красиві свічки. 
             </div>
           </div>
         </div>
@@ -38,22 +47,11 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Крок 3: Майстерність температури заливки
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Температура важлива: ідеальна температура заливки залежить від температури приміщення. Ось орієнтовні рекомендації:</br></br>Температура приміщення 21–27°C : заливка при 68–77°C</br></br>Температура приміщення 27–32°C: знижуйте температуру заливки на 2–5°C</br></br>Температура приміщення 16–21°C: підвищуйте температуру заливки на 2–5°C</br></br>Враховуйте розмір свічки: більші свічки охолоджуються довше, тому змінюйте температуру заливки відповідно. Наприклад, для свічки діаметром 10см — заливка при 68°C, для 7,5см — при 71°C.</br></br>Вологість: якщо ви не можете контролювати вологість у робочому приміщенні, під час тестування змінюйте температуру заливки, щоб знайти оптимальний результат. Змінюйте температуру поступово — по 2–5°C — і спостерігайте за результатом.
-            </div>
-          </div>
-        </div>
+  
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              Крок 4: Вибір правильного гнота
+              Крок 3: Вибір правильного гнота
             </button>
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -65,7 +63,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              Крок 5: Попередній нагрів контейнерів
+              Крок 4: Попередній нагрів контейнерів
             </button>
           </h2>
           <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -77,19 +75,19 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              Крок 6: Заливка воску
+              Крок 5: Заливка воску
             </button>
           </h2>
           <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Тепер ви готові до заливки! Пам’ятайте, що це лише відправна точка. Виготовлення свічок — це мистецтво, де безліч факторів впливають на результат. Експериментуйте з різними температурами та методами, щоб знайти найкращий варіант.
+              Температура важлива: ідеальна температура заливки залежить від температури приміщення. Ось орієнтовні рекомендації:</br></br>Температура приміщення 21–27°C : заливка при 68–77°C</br></br>Температура приміщення 27–32°C: знижуйте температуру заливки на 2–5°C</br></br>Температура приміщення 16–21°C: підвищуйте температуру заливки на 2–5°C</br></br>Враховуйте розмір свічки: більші свічки охолоджуються довше, тому змінюйте температуру заливки відповідно. Наприклад, для свічки діаметром 10см — заливка при 68°C, для 7,5см — при 71°C.</br></br>Вологість: якщо ви не можете контролювати вологість у робочому приміщенні, під час тестування змінюйте температуру заливки, щоб знайти оптимальний результат. Змінюйте температуру поступово — по 2–5°C — і спостерігайте за результатом.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-              Крок 7: Охолодження свічок
+              Крок 6: Охолодження свічок
             </button>
           </h2>
           <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">

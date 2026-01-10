@@ -13,7 +13,7 @@
     <div class="container-sm" style="margin-top: 1em;">
         <div  class="noprint">
           
-        <h1 >Калькулятор розрахунку воску та аромаолії для свічок</h1>
+        <h1>Калькулятор розрахунку воску та аромаолії для свічок</h1>
             <div class="visually-hidden">
         <p>Якщо ви виготовляєте свічки власноруч, вам може знадобитися точний розрахунок кількості воску. Найпростіший спосіб визначити, скільки соєвого воску потрібно для заповнення форми, - це використати воду. У цій статті розповім, як правильно це зробити. Це класичний метод розрахунку кількості воску та аромату, який використовується у свічковарінні, і він базується на стандартних рекомендаціях виробників воску та ароматичних олій. Формула використовується у професійному свічковарінні (це підтверджено в документаціях CandleScience, Lone Star Candle Supply та ін.).</p>
             <h2>Що знадобиться?</h2>
@@ -99,11 +99,26 @@
 
 
 
-  <img src="img/candleMaking.png" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Обложка" />
+  <img src="img/candleMaking.png"  aria-hidden="true" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Обложка" />
 
+  
         </div>
-    
-
+  
+@@include('html/note.html',{
+          "title":"KeraSoy Pillar 4120:",
+           "heat_temp":"75-85°C",
+           "color_temp":"75°C",
+           "scent_temp":"55-65°C",
+           "pour_temp":"55-65°C"
+         })
+@@include('html/note.html',{
+          "title":"NatureWax® C-3:",
+           "heat_temp":"85°C",
+           "color_temp":"80°C",
+           "scent_temp":"80°C",
+           "pour_temp":"з графіку"
+         })
+        </div>
 
     <!-- Результаты в модальном окне -->
     @@include('html/resultsModal.html',{})
