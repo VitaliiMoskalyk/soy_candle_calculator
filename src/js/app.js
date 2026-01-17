@@ -236,8 +236,10 @@ function renderTable(history) {
       <td  data-field="scentWeight">${r.scentWeight}г</td>
       <td  data-field="waxWeight">${r.waxWeight}г</td>
       <td contenteditable="true" data-field="review">${r.review?r.review:'-'}</td>
-      <td><button class="deleteRow btn btn-danger btn-sm" data-index="${index}">
-          Видалити
+      <td><button class="deleteRow btn btn-sm" data-index="${index}">
+          <svg class="icon"> 
+          <use href="img/icons/icons.svg#delete"></use>
+        </svg>
         </button></td>
     `;
 
@@ -257,7 +259,7 @@ function renderTable(history) {
 
 
 async function deleteRow(e) {
-  const index = Number(e.target.dataset.index);
+  const index = Number(e.currentTarget.dataset.index);
   const user = auth.currentUser;
 
   const ref = doc(db, "users", user.uid);
