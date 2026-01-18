@@ -16,6 +16,7 @@ global.app = {
 
 // Импорт задач
 import { copy } from "./gulp/tasks/copy.js";
+import { staticFiles } from "./gulp/tasks/static.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
@@ -27,9 +28,11 @@ import { svgSpriteTask } from "./gulp/tasks/svg-sprive.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 
+
 // Наблюдатель за изменениями в файлах
 function watcher() {
 	gulp.watch(path.watch.files, copy);
+	gulp.watch(path.watch.static, staticFiles);
 	gulp.watch(path.watch.html, html); //gulp.series(html, ftp)
 	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.js, js);
@@ -40,7 +43,7 @@ function watcher() {
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSpriteTask));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, staticFiles, html, scss, js, images, svgSpriteTask));
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
