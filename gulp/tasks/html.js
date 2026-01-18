@@ -11,7 +11,10 @@ export const html = () => {
 				message: "Error: <%= error.message %>"
 			}))
 		)
-		.pipe(fileInclude())
+		.pipe(fileInclude({
+		
+			basepath: 'src'
+		}))
 		/*
 		.pipe(pug({
 			// Cжатие HTML файла

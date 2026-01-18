@@ -1,153 +1,28 @@
 <html lang="uk">
-	 <head>
-	  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="uk">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="sNZdilWY8xCsKBm-8GU9yZQJ7rkVSWJoXfVlDIm_p8Q" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css?_v=20260117190211" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css?_v=20260117190211">
-	  <title>Як розрахувати температуру заливки воску NatureWax® C-3</title>
-    <meta name="description" content="Правильна температура заливки воску NatureWax® C-3 для ідеальних свічок. Покрокова інструкція від Cargill з урахуванням умов приміщення.">
-    <meta name="keywords" content="температура заливки воску, NatureWax C-3, виготовлення свічок, соєвий віск, покрокова інструкція, оптимальна температура">
-    <link rel="canonical" href="https://aboutcandles.netlify.app/">
-    <meta name="author" content="About Candles">
-    <meta property="og:title" content="Як розрахувати температуру заливки воску NatureWax® C-3">   
-    <meta property="og:site_name" content="AboutCandles"> 
-    <meta property="og:description" content="Правильна температура заливки воску NatureWax® C-3 для ідеальних свічок. Покрокова інструкція від Cargill з урахуванням умов приміщення.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aboutcandles.netlify.app/">
-    <meta property="og:image" content="https://aboutcandles.netlify.app/img/og-image.png">
-    <meta property="og:image:width" content="1200"> 
-    <meta property="og:image:height" content="630"> 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Як розрахувати температуру заливки воску NatureWax® C-3">
-    <meta name="twitter:description" content="Правильна температура заливки воску NatureWax® C-3 для ідеальних свічок. Покрокова інструкція від Cargill з урахуванням умов приміщення.">
-    <meta name="twitter:image" content="https://aboutcandles.netlify.app/img/og-image.png">
+	@@include('html/head.html',{
+	"title":"Як розрахувати температуру заливки воску NatureWax® C-3",
+  "description":"Правильна температура заливки воску NatureWax® C-3 для ідеальних свічок. Покрокова інструкція від Cargill з урахуванням умов приміщення.",
+  "keywords":"температура заливки воску, NatureWax C-3, виготовлення свічок, соєвий віск, покрокова інструкція, оптимальна температура",
+  "canonical": "https://aboutcandles.netlify.app/ua/index.html",
+    "uaUrl": "https://aboutcandles.netlify.app/ua/c3.html",
+    "enUrl": "https://aboutcandles.netlify.app/en/c3.html"
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AboutCandles",
-      "url": "https://aboutcandles.netlify.app"
-    }
-    </script>
-</head>
+	})
 	<body  class="d-flex flex-column min-vh-100">
-		<header class="container-sm" id="header" style="min-height: 56px;">
-  <nav class="navbar navbar-expand-lg navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">AboutCandles</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="waxWeight.html">Розрахунок кількості воску</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Температурні режими
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="c3.html">Cargill NatureWax® C-3</a></li>
-              <li><a class="dropdown-item" href="kerasoy_pillar_4120.html">KeraSoy Pillar 4120</a></li>
-            </ul>
-          </li>
-           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Гноти
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="ww.html">Котонові</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- Авторизация -->
-        <div class="d-flex align-items-center gap-2">
-          <!-- При авторизованном пользователе -->
-          <div id="user-info" class="d-flex align-items-center gap-2" style="display:none;">
-            <a href="profile.html" id="user-email" class="text-secondary small"></a>
-            <button id="logout" class="btn btn-outline-secondary btn-sm">Вийти</button>
-          </div>
-
-          <!-- При неавторизованном -->
-          <div id="auth-buttons">
-            <button id="login" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
-              data-bs-target="#loginModal">Увійти / Реєстрація</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
-
-<!-- Модальное окно логина -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <form id="loginForm" class="p-3">
-        <div class="mb-3">
-          <label for="emailInput" class="form-label">Email</label>
-          <input type="email" id="emailInput" class="form-control" required autocomplete="email">
-        </div>
-        <div class="mb-3">
-          <label for="passwordInput" class="form-label">Пароль</label>
-          <input type="password" id="passwordInput" class="form-control" required autocomplete="current-password">
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Увійти / Зареєструватися</button>
-      </form>
-    </div>
-  </div>
-</div>
+		@@include('html/header.html',{ "lang": "ua" })
 		<main>
 
 
       <div class="container-sm" style="margin-top: 1em;">
         <h1>Як розрахувати температуру заливки воску NatureWax® C-3</h1>
         <p>Правильна температура заливки є ключем до створення ідеальних свічок із соєвого воску NatureWax® C-3. Вона впливає на зовнішній вигляд, рівномірність охолодження та розкриття аромату. У цій статті розглянемо, як обчислити оптимальну температуру заливки залежно від умов у приміщенні. Варто зазначити, що в різних джерелах можна зустріти дещо відмінні рекомендації щодо температур — це пов’язано з особливостями воску, типом тари, ароматизаторами та навіть вологістю чи температурою у кімнаті. Тому наведені дані слід розглядати як орієнтир, а ідеальні параметри бажано підбирати експериментально для кожної партії.</p>
-
-        <div class=" note row justify-content-start text-start g-3 mt-4 mb-4">
-    <span></span>
-    
-    <div class="col-6 col-md-auto mt-0 align-self-center" >
-      <svg class="icon" > 
-          <use href="img/icons/icons.svg#heat" ></use>
-        </svg>
-        <span>85°C</span>
-    </div>
-
-    <div class="col-6 col-md-auto mt-0 align-self-center">
-      <svg class="icon"> 
-          <use href="img/icons/icons.svg#color"></use>
-        </svg>
-        <span>80°C</span>
-    </div>
-
-    <div class="col-6 col-md-auto mt-0 align-self-center">
-      <svg class="icon"> 
-          <use href="img/icons/icons.svg#scent"></use>
-        </svg>
-        <span>80°C</span>
-    </div>
-
-    <div class="col-6 col-md-auto mt-0 align-self-center">
-      <svg class="icon"> 
-          <use href="img/icons/icons.svg#candle"></use>
-        </svg>
-        <span>з графіку</span>
-    </div>
-
-</div>
+        @@include('html/note.html',{
+          "title":"",
+           "heat_temp":"85°C",
+           "color_temp":"80°C",
+           "scent_temp":"80°C",
+           "pour_temp":"з графіку"
+         })
 
         <h2>Покрокова інструкція з сайту Cargill</h2>
           <div class="accordion mb-3" id="accordionExample2" >
@@ -229,7 +104,7 @@
         <p>У цьому графіку відображено залежність температур заливки воску від температури у приміщенні, згідно з відео-рекомендаціями компанії Cargill. Відео демонструє, як змінюються оптимальні температури при різних температурах у приміщенні, та ілюструє правила коригування температури заливки. Використовуючи ці дані, я створив візуалізацію, яка дозволяє побачити закономірності та легко підібрати температурний режим для вашого випадку.</p>
           <div id="chart" class="m-3"></div>
 
-          <script src="https://cdn.jsdelivr.net/npm/apexcharts?_v=20260117190211"></script>
+          <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
           <script>
           function interpolateSeries(series, step=1) {
             let result = [];
@@ -414,79 +289,7 @@
 </div>
  
 </main>
-		<footer class="bg-light border-top mt-auto">
-    <!-- Toast для уведомления о необходимости авторизации -->
-    <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 1080;">
-  <div id="authToast" class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="d-flex">
-      <div id="toast-body" class="toast-body">
-        Для виконання розрахунку потрібно увійти в систему.
-      </div>
-      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-  </div>
-</div>
-<div class="container py-4">
-
-    <div class="row gy-3">
-
-      <!-- Ліва колонка -->
-      <div class="col-12 col-md-6">
-        <h6 class="text-uppercase fw-semibold">About Candles</h6>
-        <p class="text-muted small mb-2">
-          Сервіс з інформацією про виготовлення свічок.
-        </p>
-        <p class="text-muted small mb-0">
-          Під час реєстрації ми зберігаємо адресу електронної пошти користувача
-          з метою ідентифікації облікового запису та збереження історії розрахунків.
-        </p>
-      </div>
-
-      <!-- Права колонка -->
-      <div class="col-12 col-md-6 text-md-end">
-        <ul class="list-unstyled mb-2">
-          <li>
-            <a href="/privacy-policy.html" class="text-decoration-none text-muted">
-              Політика конфіденційності
-            </a>
-          </li>
-          <li>
-            <a href="/terms.html" class="text-decoration-none text-muted">
-              Умови використання
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/50kscents/" class="text-decoration-none text-muted">
-              Контакти
-            </a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <hr>
-
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <small class="text-muted">
-        © 2026 About Candles. Усі права захищені.
-      </small>
-
-      <div class="mt-2 mt-md-0">
-        
-        <a href="https://www.instagram.com/50kscents/" class="social-link" aria-label="Instagram"
-   target="_blank"
-   rel="noopener" ><svg class="icon icon-instagram">
-    <use href="img/icons/icons.svg#instagram"></use>
-  </svg></a>
-      </div>
-    </div>
-
-  </div>
-</footer>
-
-<script type="module" src="js/app.min.js?_v=20260117190211"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?_v=20260117190211"></script>
+		@@include('html/footer.html',{})
 
 	</body>
 </html>

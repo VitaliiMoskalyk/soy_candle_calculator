@@ -19,7 +19,7 @@ export function getCalculatedData() {
       const m_w_total = V_total / ((1 / rho_w) + (f / rho_f));
       const m_f_total = f * m_w_total;
       const V_f_total = m_f_total / rho_f;
-
+console.log('Calculated Data:' + V_c + ', ' + jarCount + ', ' + f + ', ' + rho_f + ', ' + V_f_total + ', ' + m_f_total + ', ' + m_w_total);
       return{
         waxType:waxGravity.selectedOptions[0].innerText,
         jarValue:V_c,

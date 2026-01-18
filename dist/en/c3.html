@@ -1,0 +1,523 @@
+<html lang="en">
+	 <head>
+	  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="alternate" hreflang="uk" href="https://aboutcandles.netlify.app/ua/">
+    <link rel="alternate" hreflang="en" href="https://aboutcandles.netlify.app/en/">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="sNZdilWY8xCsKBm-8GU9yZQJ7rkVSWJoXfVlDIm_p8Q" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css?_v=20260118201421" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.min.css?_v=20260118201421">
+	  <title>How to calculate the pouring temperature of NatureWax® C-3 wax</title>
+    <meta name="description" content="Correct pouring temperature of NatureWax® C-3 wax for perfect candles. Step-by-step instructions from Cargill, taking into account room conditions.">
+    <meta name="keywords" content="pouring temperature of wax, NatureWax C-3, candle making, soy wax, step-by-step instructions, optimal temperature">
+    <link rel="canonical" href="https://aboutcandles.netlify.app/">
+    <meta name="author" content="About Candles">
+    <meta property="og:title" content="How to calculate the pouring temperature of NatureWax® C-3 wax">   
+    <meta property="og:site_name" content="AboutCandles"> 
+    <meta property="og:description" content="Correct pouring temperature of NatureWax® C-3 wax for perfect candles. Step-by-step instructions from Cargill, taking into account room conditions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aboutcandles.netlify.app/">
+    <meta property="og:image" content="https://aboutcandles.netlify.app/img/og-image.png">
+    <meta property="og:image:width" content="1200"> 
+    <meta property="og:image:height" content="630"> 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to calculate the pouring temperature of NatureWax® C-3 wax">
+    <meta name="twitter:description" content="Correct pouring temperature of NatureWax® C-3 wax for perfect candles. Step-by-step instructions from Cargill, taking into account room conditions.">
+    <meta name="twitter:image" content="https://aboutcandles.netlify.app/img/og-image.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AboutCandles",
+      "url": "https://aboutcandles.netlify.app"
+    }
+    </script>
+</head>
+	<body  class="d-flex flex-column min-vh-100">
+		<header class="container-sm" id="header" style="min-height: 56px;">
+  <nav class="navbar navbar-expand-lg navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/en/">AboutCandles</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/en/waxWeight.html">Wax calculator</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Waxes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/en/c3.html">Cargill NatureWax® C-3</a></li>
+              <li><a class="dropdown-item" href="/en/kerasoy_pillar_4120.html">KeraSoy Pillar 4120</a></li>
+            </ul>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Wicks
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/en/ww.html">Cotton</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+        <!-- Авторизация -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- При авторизованном пользователе -->
+          <div id="user-info" class="d-flex align-items-center gap-2" style="display:none;">
+            <a href="/en/profile.html" id="user-email" class="text-secondary small"></a>
+            <button id="logout" class="btn btn-outline-secondary btn-sm">Sign out</button>
+          </div>
+
+          <!-- При неавторизованном -->
+          <div id="auth-buttons">
+            <button id="login" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
+              data-bs-target="#loginModal">Sign in / Sign up</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Модальное окно логина -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="loginForm" class="p-3">
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Email</label>
+          <input type="email" id="emailInput" class="form-control" required autocomplete="email">
+        </div>
+        <div class="mb-3">
+          <label for="passwordInput" class="form-label">Password</label>
+          <input type="password" id="passwordInput" class="form-control" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Sign in / Sign up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+		<main>
+
+
+      <div class="container-sm" style="margin-top: 1em;">
+        <h1>How to calculate the pouring temperature of NatureWax® C-3 wax</h1>
+        <p>Correct pouring temperature is key to creating perfect candles from NatureWax® C-3 soy wax. It affects the appearance, even cooling, and scent throw. In this article, we'll explore how to calculate the optimal pouring temperature based on room conditions. Note that different sources may provide slightly different recommendations for temperatures — this is due to variations in wax properties, container types, fragrance oils, and even humidity or room temperature. Therefore, the data provided should be considered as a reference point, and ideal parameters should be determined experimentally for each batch.</p>
+        <div class=" note row justify-content-start text-start g-3 mt-4 mb-4">
+    <span></span>
+    
+    <div class="col-6 col-md-auto mt-0 align-self-center" >
+      <svg class="icon" > 
+          <use href="/img/icons/icons.svg#heat" ></use>
+        </svg>
+        <span>85°C</span>
+    </div>
+
+    <div class="col-6 col-md-auto mt-0 align-self-center">
+      <svg class="icon"> 
+          <use href="/img/icons/icons.svg#color"></use>
+        </svg>
+        <span>80°C</span>
+    </div>
+
+    <div class="col-6 col-md-auto mt-0 align-self-center">
+      <svg class="icon"> 
+          <use href="/img/icons/icons.svg#scent"></use>
+        </svg>
+        <span>80°C</span>
+    </div>
+
+    <div class="col-6 col-md-auto mt-0 align-self-center">
+      <svg class="icon"> 
+          <use href="/img/icons/icons.svg#candle"></use>
+        </svg>
+        <span>from the chart</span>
+    </div>
+
+</div>
+
+        <h2>Step-by-step instructions from Cargill</h2>
+          <div class="accordion mb-3" id="accordionExample2" >
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Step 1: Prepare the wax
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Heat the wax pieces to a temperature of 85°C. This is the optimal heating temperature, which ensures even and beautiful candles.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Step 2: Adding fragrance oil
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+            If you are using a fragrance oil, Cargill recommends a fragrance load of 6% to 9% of the wax weight. For more intense fragrances, choose a value closer to the upper limit of this range. Pour the fragrance oil into a mixing container, gradually adding the heated wax. Mix during the process to ensure the fragrance fully combines with the wax. For small batches of candles, this may take about 5 minutes. </br></br>If you are not achieving the desired appearance of the wax, try reducing the amount of fragrance and test different proportions. You can also change the mixing time. </br></br>Remember — it's an art, not a science!
+            </div>
+          </div>
+        </div>
+  
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Step 3: Choosing the right wick
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Choosing the right wick is very important — it affects the burn time, flame height, and fragrance throw. There are many different types of wicks. When choosing, consider the candle diameter, presence of fragrance, and type of wax. Test different options until you find the ideal one for your candles.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Step 4: Preheating the containers
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Place the containers in a warm water bath so they warm up slightly — but not overheated. This helps prevent cracks and separation of the wax during cooling.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              Step 5: Pouring the wax
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Temperature is important: the ideal pouring temperature depends on the room temperature. Here are some approximate recommendations:</br></br>Room temperature 21–27°C: pour at 68–77°C</br></br>Room temperature 27–32°C: reduce the pouring temperature by 2–5°C</br></br>Room temperature 16–21°C: increase the pouring temperature by 2–5°C</br></br>Consider candle size: larger candles cool more slowly, so adjust the pouring temperature accordingly. For example, for a candle with a diameter of 10cm — pour at 68°C, for a 7.5cm candle — at 71°C.</br></br>Humidity: if you cannot control humidity in your workspace, during testing change the pouring temperature to find the optimal result. Change the temperature gradually — by 2–5°C — and observe the results.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              Step 6: Cooling the candles
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Candles usually need at least 12 hours to cool properly. Place the containers at least 5 cm apart from each other to ensure even cooling. It's also important that the temperature and humidity in the room don't change during the process. Too rapid or slow cooling can affect the appearance of the wax.
+            </div>
+          </div>
+        </div>
+          </div>
+        <h2>Temperature dependence from Cargill video</h2>
+        <p>In this chart, the dependence of the wax pouring temperature on the room temperature is shown, according to Cargill's video recommendations. The video demonstrates how optimal temperatures change at different room temperatures and illustrates the rules for adjusting the pouring temperature. Using these data, I created a visualization that allows you to see the patterns and easily select an appropriate temperature regime for your case.</p>
+          <div id="chart" class="m-3"></div>
+
+          <script src="https://cdn.jsdelivr.net/npm/apexcharts?_v=20260118201421"></script>
+          <script>
+          function interpolateSeries(series, step=1) {
+            let result = [];
+            for (let i = 0; i < series.length-1; i++) {
+              let start = series[i];
+              let end = series[i+1];
+              result.push(start);
+
+              let count = Math.floor((end[0] - start[0]) / step);
+              for (let j = 1; j < count; j++) {
+                let x = start[0] + step*j;
+                let y = start[1] + ((end[1] - start[1]) / (end[0] - start[0])) * (x - start[0]);
+                result.push([x, y]);
+              }
+            }
+            result.push(series[series.length-1]);
+            return result;
+          }
+
+          // Исходные данные
+          let seriesData = [
+            { name: 'Container 5 cm', data: [[15,85],[21,79],[26,74],[32,68]] },
+            { name: 'Container 7.5 cm', data: [[15,82],[21,76],[26,71],[32,65]] },
+            { name: 'Container 10 cm', data: [[15,79],[21,73],[26,68],[32,62]] }
+          ];
+
+          // Интерполируем точки с шагом 1
+          seriesData.forEach(s => {
+            s.data = interpolateSeries(s.data, 1);
+          });
+
+          var options = {
+            chart: {
+              type: 'line',
+              height: 400,
+              zoom: { enabled: false }
+            },
+            series: seriesData,
+            xaxis: {
+              type: 'numeric',
+              min: 15,
+              max: 32,
+              tickAmount: 17,
+              title: { text: "The temperature inside the room, °C" },
+              labels: {
+                  formatter: function (val) {
+                    return parseInt(val); // убирает .0
+                  }
+                }
+            },
+            yaxis: {
+              title: { text: "Pouring temperature, °C" },
+              
+            },
+            colors: ['#2ECC71','#3498DB',  '#E74C3C'],
+            legend: { position: 'top' },
+            tooltip: {
+              shared: true
+            },
+            tooltip: {
+              shared: true,
+              y: {
+                formatter: function(val) {
+                  return val + "°C"; // добавляем °C только в tooltip
+                }
+              },
+              x: {
+                formatter: function(val) {
+                  return val + "°C"; // добавляем °C только в tooltip
+                }
+              }
+            }
+          };
+
+          var chart = new ApexCharts(document.querySelector("#chart"), options);
+          chart.render();
+          </script>
+
+        
+          <div style="text-align: center;" class="m-3">
+            <iframe  style="width: 100%; height:315px; max-width:516px; text-align: center;" src="https://www.youtube.com/embed/LjQc4x2Guwg?si=QUuHJSWtzR99KAag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>   
+      
+<h2>Instruction for working with NatureWax™ C-3 and C-6 wax</h2>
+<p>* Data is generalized from official <cite><a href="https://www.cargill.com/doc/1432078141913/naturewax-c-3-and-c-6-product-handling.pdf">instructions for using NatureWax™ C-3 and C-6 for container candles (Cargill). </a></cite></p>
+
+   <div class="accordion mb-3" id="accordionExample2" >
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
+        Step 1: Melting the wax
+      </button>
+    </h2>
+    <div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+Heat the wax to a temperature of 71–93 °C, constantly stirring. Do not overheat above 93 °C to avoid discoloration.      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+        Step 2: Adding ingredients
+      </button>
+    </h2>
+    <div id="collapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+Other additives (except for fragrance and colorant) can be added at any stage of melting.      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+        Step 3: Fragrance and colorant addition
+      </button>
+    </h2>
+    <div id="collapseThree1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+Add fragrance and colorant when the wax is fully melted, thoroughly mixing for even distribution.
+<ul>
+  <li>Recommended fragrance amount: up to 6%.</li>
+  <li>With special additives, 7–10% fragrance can be used.</li>
+  <li>Liquid and powder colorants are suitable.</li>
+</ul>      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">
+        Step 4: Cooling and preparing for pouring
+      </button>
+    </h2>
+    <div id="collapseFour1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+After fully melting, cool the wax to 49–74 °C. This reduces the risk of cracking and color changes.      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive1" aria-expanded="false" aria-controls="collapseFive1">
+        Step 5: Pouring the candles
+      </button>
+    </h2>
+    <div id="collapseFive1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+Before pouring, preheat the glass container to room temperature.
+Optimal pouring temperature depends on the room temperature:
+<ul>
+  <li>at 16–21 °C → 77–82 °C,</li>
+  <li>at 21–27 °C → 71–77 °C,</li>
+  <li>at 27–32 °C → 63–68 °C.</li>
+</ul>      
+If the wax is stored in a melting pot overnight, maintain the temperature at 54–63 °C.
+</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix1" aria-expanded="false" aria-controls="collapseSix1">
+        Step 6: Cooling
+      </button>
+    </h2>
+    <div id="collapseSix1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+Candles should be cooled for at least 12 hours before the first lighting. This ensures complete crystal formation and a good appearance.      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven1" aria-expanded="false" aria-controls="collapseSeven1">
+        Additional Information
+      </button>
+    </h2>
+    <div id="collapseSeven1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+<ul>
+  <li>For candles with a diameter over 9 cm, it is recommended to use two wicks.</li>
+  <li>Wax works well with different types of colorants.</li>
+</ul>      </div>
+    </div>
+  </div>
+        </div>
+</div>
+ 
+</main>
+		<footer class="bg-light border-top mt-auto">
+    <!-- Toast для уведомления о необходимости авторизации -->
+    <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 1080;">
+  <div id="authToast" class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div id="toast-body" class="toast-body">
+        Для виконання розрахунку потрібно увійти в систему.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+<div class="container py-4">
+
+    <div class="row gy-3">
+
+      <!-- Ліва колонка -->
+      <div class="col-12 col-md-6">
+        <h6 class="text-uppercase fw-semibold">About Candles</h6>
+        <p class="text-muted small mb-2">
+          Service with information about candle making.
+        </p>
+        <p class="text-muted small mb-0">
+          During registration we store the user's email address
+          for account identification and to save calculation history.
+        </p>
+      </div>
+
+      <!-- Права колонка -->
+      <div class="col-12 col-md-6 text-md-end">
+        <ul class="list-unstyled mb-2">
+          <li>
+            <a href="/@@lang/privacy-policy.html" class="text-decoration-none text-muted">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="/@@lang/terms.html" class="text-decoration-none text-muted">
+              Terms of use
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/50kscents/" class="text-decoration-none text-muted">
+              Contact
+            </a>
+          </li>
+          <li><nav class="ms-auto pt-2">
+  <a href="/ua/" class="btn btn-outline-primary btn-sm lang-btn">UA</a>
+  <a href="/en/" class="btn btn-outline-primary btn-sm lang-btn">EN</a>
+</nav></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <small class="text-muted">
+        © 2026 About Candles. All rights reserved.
+      </small>
+
+      <div class="mt-2 mt-md-0">
+        
+        <a href="https://www.instagram.com/50kscents/" class="social-link" aria-label="Instagram"
+   target="_blank"
+   rel="noopener" ><svg class="icon icon-instagram">
+    <use href="/img/icons/icons.svg#instagram"></use>
+  </svg></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script type="module" src="/js/app.min.js?_v=20260118201421"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?_v=20260118201421"></script>
+<script>
+  // Автоматическая подсветка текущего языка
+  const langLinks = document.querySelectorAll('.lang-btn');
+  const currentPath = window.location.pathname;
+
+  langLinks.forEach(link => {
+    // Если путь совпадает с href, делаем кнопку активной
+    if (currentPath.startsWith(link.getAttribute('href'))) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    }
+  });
+</script>
+
+<style>
+  /* Уменьшение кнопок ещё сильнее */
+  .lang-btn {
+    padding: 0.25rem 0.5rem; /* меньше стандартного btn-sm */
+    font-size: 0.75rem; /* маленький шрифт */
+  }
+</style>
+
+	</body>
+</html>

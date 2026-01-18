@@ -10,12 +10,12 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/@@lang/waxWeight.html">Розрахунок кількості воску</a>
+            <a class="nav-link" href="/@@lang/waxWeight.html">Wax calculator</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Температурні режими
+              Waxes
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/@@lang/c3.html">Cargill NatureWax® C-3</a></li>
@@ -25,10 +25,10 @@
            <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Гноти
+              Wicks
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/@@lang/ww.html">Котонові</a></li>
+              <li><a class="dropdown-item" href="/@@lang/ww.html">Cotton</a></li>
             </ul>
           </li>
         </ul>
@@ -39,14 +39,13 @@
           <!-- При авторизованном пользователе -->
           <div id="user-info" class="d-flex align-items-center gap-2" style="display:none;">
             <a href="/@@lang/profile.html" id="user-email" class="text-secondary small"></a>
-            <button id="logout" class="btn btn-outline-secondary btn-sm">Вийти</button>
+            <button id="logout" class="btn btn-outline-secondary btn-sm">Sign out</button>
           </div>
 
           <!-- При неавторизованном -->
           <div id="auth-buttons">
             <button id="login" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
-              data-bs-target="#loginModal">Увійти / Реєстрація</button>
-          </div>
+              data-bs-target="#loginModal">Sign in / Sign up</button>
         </div>
       </div>
     </div>
@@ -63,10 +62,10 @@
           <input type="email" id="emailInput" class="form-control" required autocomplete="email">
         </div>
         <div class="mb-3">
-          <label for="passwordInput" class="form-label">Пароль</label>
+          <label for="passwordInput" class="form-label">Password</label>
           <input type="password" id="passwordInput" class="form-control" required autocomplete="current-password">
         </div>
-        <button type="submit" class="btn btn-primary w-100">Увійти / Зареєструватися</button>
+        <button type="submit" class="btn btn-primary w-100">Sign in / Sign up</button>
       </form>
     </div>
   </div>

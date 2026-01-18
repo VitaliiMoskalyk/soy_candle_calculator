@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/head.html',{
+	"title":"Soy Candle Wax Weight Calculator",
+  "description":"How to calculate the weight of soy wax and essential oil for a candle. A precise method using water to determine the required amount of materials.",
+  "keywords":"wax calculator, soy wax calculation, soy wax, essential oils, candle making, DIY candles"
+	})
+	<body class="d-flex flex-column min-vh-100">
+
+		@@include('html/header-en.html',{ "lang": "en" })
+		<main>
+      <div class="container-sm" style="margin-top: 1em;">
+        <div  class="noprint">
+        <h1>How to Calculate the Weight of Soy Wax and Essential Oil for a Candle</h1>
+            <p>If you are making candles by hand, you may need an accurate calculation of the amount of wax. The simplest way to determine how much soy wax is needed to fill a mold is to use water. In this article, we'll explain how to do it correctly. This is a classic method for calculating the amount of wax and fragrance, used in candle making, and it's based on standard recommendations from wax and essential oil manufacturers. The formula is used in professional candle making (as confirmed in CandleScience, Lone Star Candle Supply, and other documentation).</p>
+            <h2>What You'll Need</h2>
+            <ul>
+            <li>Container into which the melted wax will be poured</li>
+            <li>Water</li>
+            <li>Weighing scales</li>
+            </ul>
+            <h2>Why This Calculator Is the Most Accurate</h2>
+             <p>Most online calculators estimate the amount of wax approximately, ignoring important physical parameters - such as the density of different types of soy wax or the relative density of essential oils.
+As a result, users get errors within 5–10%, which can significantly affect the final result:
+a candle that is underfilled, an aroma that is too weak or, conversely, overly saturated.
+
+My calculator is specifically designed to avoid these errors.
+It takes into account:</p>
+              <ul>
+                <li>the real density of the selected type of wax (for example, NatureWax® C-3 or KeraSoy),</li>
+                <li>the relative density of the essential oil - a parameter that is usually ignored in other calculations,</li>
+                <li>the number of containers and the desired percentage of fragrance,</li>
+                <li>and, most importantly, performs calculations in physically correct units without rounding results.</li>
+              </ul>
+<p>This means you will get an absolutely accurate weight of wax and essential oil for any number of candles.
+The calculation is based on the formula used by professional manufacturers (CandleScience, Lone Star Candle Supply, NatureWax), so the result can be used even in commercial production.</p>
+            <h2>Step-by-Step Instructions</h2>
+            <ol>
+                <li>Fill the container of the future candle with water to the desired level that the wax should occupy.</li>
+                <li>Pour the water from the container into a measuring cup and determine its volume in milliliters (ml). If you don't have a measuring cup, you can weigh the water (1 ml = 1 gram of water). Don't forget to tare the scale to weigh only the water without the container.</li>
+                <li>Determine what percentage of essential oil you want to add to your candle. Each oil has recommendations for usage percentage, but usually it is within 3-12% of wax weight.</li>
+                <li>Some essential oil manufacturers specify relative density of their oils compared to water density. For example, CandleScience lists this in their Safety Data Sheet and calls it Specific gravity (H2O=1). If you know this value - enter it for more accurate calculations. If not known - then average value is 0.9-1.</li>
+                <li>Enter the obtained data into the calculator below and click "Calculate":</li>
+            </ol>
+            
+        <!-- Калькулятор -->
+        <div style="display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;gap: 1em; margin-top: 3em; margin-bottom: 1em;">
+    <form id="form" class="was-validated" style="max-width: 400px;width: 100%;">
+      <div class="mb-3">
+        <label for="floatingSelectGrid" class="form-label">Wax Type</label>
+        <select class="form-select" id="floatingSelectGrid">
+          <option selected value="0.86">NatureWax® C-3</option>
+          <option value="0.9">KeraSoy Pillar 4120</option>
+          <option value="0.9">KeraSoy Container 4130</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="jar" class="form-label">Container Volume, ml</label>
+        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="jar-amount" class="form-label">Number of Containers</label>
+        <input id="jar-amount" type="number" value="1" min="1" max="100" step="1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="intense" class="form-label">Intensity of fragrance, %</label>
+        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="s" class="form-label">Fragrance specific gravity</label>
+        <input id="s" type="number" min="0.5" max="1.9" step="0.000001" class="form-control" value="0.98" required>
+      </div>
+      <div class="mb-3">
+        <button id="calculate" disabled  class="btn btn-primary" type="button">Calculate</button>
+      </div>
+    </form>
+  <img src="/img/odesaCandle.png" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Container candle on the table" />
+
+    </div>
+    <!-- Результаты в модальном окне -->
+    @@include('html/resultsModal-en.html',{})
+  </div>
+
+    
+		</main>
+		@@include('html/footer-en.html',{})
+
+  </body>
+</html>

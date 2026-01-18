@@ -17,7 +17,7 @@ import {
 } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc,  arrayUnion, updateDoc  } from "firebase/firestore";
 import  {getCalculatedData}  from "./modules/getCalculatedData.js";
-
+import {getCurrentLang} from "./modules/getCurrentLang.js";
 // ===== Firebase config =====
 const firebaseConfig = {
   apiKey: "AIzaSyAZnJkd50MA6alle1sAACLL3Gp_KZ6SB08",
@@ -51,6 +51,7 @@ const db = getFirestore();
   const tableBody = document.querySelector("#historyTable tbody");
 
   let userLoggedIn = false;
+  const currentLang = getCurrentLang();
 
   // === Слежение за авторизацией ===
   onAuthStateChanged(auth, async (user) => {
@@ -111,6 +112,7 @@ await setDoc(doc(db, "users", user.uid), {
 
 
       } else {
+        currentLang==='en' ? alert("Error: " + err.message) :
         alert("Ошибка: " + err.message);
       }
     }
@@ -125,6 +127,7 @@ await setDoc(doc(db, "users", user.uid), {
       await handleAuth(email, password);
       bootstrap.Modal.getInstance(document.getElementById("loginModal"))?.hide();
     } catch (err) {
+      currentLang==='en' ? alert("Error: " + err.message) :
       alert("Ошибка: " + err.message);
     }
     finally{
@@ -137,6 +140,7 @@ await setDoc(doc(db, "users", user.uid), {
     try {
       await signOut(auth);
     } catch (err) {
+      currentLang==='en' ? alert("Logout error: " + err.message) :
       alert("Ошибка выхода: " + err.message);
     } finally{
       location.reload();
@@ -171,14 +175,14 @@ await setDoc(doc(db, "users", user.uid), {
     
       document.getElementById("intense-value").textContent = `${resultData.intense} %`;
       document.getElementById("s-value").textContent = resultData.gravity;
-      document.getElementById("v-value").textContent = resultData.scentValue + " мл";
-      document.getElementById("m-value").textContent = resultData.scentWeight + " г";
-      document.getElementById("wax-value").textContent = resultData.waxWeight + " г";
-      document.getElementById("jar-value").textContent = `${resultData.jarValue} мл * ${resultData.jarAmount} шт`;
+      document.getElementById("v-value").textContent = resultData.scentValue + (currentLang === "en" ? " ml" : " мл");
+      document.getElementById("m-value").textContent = resultData.scentWeight + (currentLang === "en" ? " g" : " г");
+      document.getElementById("wax-value").textContent = resultData.waxWeight + (currentLang === "en" ? " g" : " г");
+      document.getElementById("jar-value").textContent = `${resultData.jarValue} ${currentLang === "en" ? "ml" : "мл"} * ${resultData.jarAmount} ${currentLang === "en" ? "pcs" : "шт"}`;
 
       const modalEl = document.getElementById("exampleModal");
       new bootstrap.Modal(modalEl).show();
-  
+  console.log(resultData)
             return resultData;
         }
   });
@@ -189,7 +193,7 @@ await setDoc(doc(db, "users", user.uid), {
         const user = auth.currentUser;
 
         if (!userLoggedIn) {
-          toastText.textContent=`Для збереження розрахунку потрібно увійти в систему.`;
+          toastText.textContent=currentLang==='en' ? `For saving the calculation, you need to log in.` : `Для збереження розрахунку потрібно увійти в систему.`;
           authToast?.show();
         
           return};
@@ -206,7 +210,7 @@ await setDoc(doc(db, "users", user.uid), {
             { merge: true }
         );
 
-      toastText.textContent=`Розрахунок збережено`;
+      toastText.textContent=currentLang==='en' ? `Calculation saved` : `Розрахунок збережено`;
       authToast?.show();
       
         }
@@ -228,17 +232,17 @@ function renderTable(history) {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${index + 1}</td>
-      <td  data-field="jarValue">${r.jarValue}мл\n${r.jarAmount}шт</td>
+      <td  data-field="jarValue">${r.jarValue} ${currentLang === "en" ? "ml" : "мл"}\n${r.jarAmount} ${currentLang === "en" ? "pcs" : "шт"}</td>
       <td  data-field="waxType">${r.waxType}</td>
       <td  data-field="intense">${r.intense}%</td>
       <td contenteditable="true" data-field="scent">${r.scent?r.scent:r.intense}</td>
-      <td  data-field="scentValue">${r.scentValue}мл</td>
-      <td  data-field="scentWeight">${r.scentWeight}г</td>
-      <td  data-field="waxWeight">${r.waxWeight}г</td>
+      <td  data-field="scentValue">${r.scentValue} ${currentLang === "en" ? "ml" : "мл"}</td>
+      <td  data-field="scentWeight">${r.scentWeight} ${currentLang === "en" ? "g" : "г"}</td>
+      <td  data-field="waxWeight">${r.waxWeight} ${currentLang === "en" ? "g" : "г"}</td>
       <td contenteditable="true" data-field="review">${r.review?r.review:'-'}</td>
       <td><button class="deleteRow btn btn-sm" data-index="${index}">
           <svg class="icon"> 
-          <use href="img/icons/icons.svg#delete"></use>
+          <use href="/img/icons/icons.svg#delete"></use>
         </svg>
         </button></td>
     `;
@@ -270,7 +274,7 @@ async function deleteRow(e) {
 
   await updateDoc(ref, { history: data.history });
   renderTable(data.history);
-      toastText.textContent=`Рядок ${index+1} видалено`;
+      toastText.textContent= currentLang==='en' ? `Row ${index+1} deleted` : `Рядок ${index+1} видалено`;
       authToast?.show()
 }
 

@@ -6,11 +6,14 @@
   "keywords":"історія розрахунків, кабінет користувача, соєвий віск, ароматичні олії, виготовлення свічок, збережені розрахунки"
 	})
 	<body class="d-flex flex-column min-vh-100">
-		@@include('html/header.html',{})
+		@@include('html/header.html',{ "lang": "ua" })
 		<main>
+    <div class="container-sm" style="margin-top: 1em;">
+        <h1>Історія ваших розрахунків</h1>
+        <p>Нижче наведена історія ваших розрахунків соєвого воску та ароматичних олій для свічок. Ви можете переглядати, редагувати <b>Аромат</b> та <b>Нотатки</b>, або видаляти попередні записи за потреби.</p>
 
 
-    <div class="container-sm table-responsive" style="margin-top: 1em;">
+    <div class=" table-responsive" style="margin-top: 1em;">
         <table id="historyTable" class="table table-sm table-striped table-bordered table-hover">
   <thead>
     <tr>

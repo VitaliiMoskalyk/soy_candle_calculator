@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="uk">
 	@@include('html/head.html',{
-	"title":"Як розрахувати вагу соєвого воску та аромату для свічки",
-  "description":"Точний розрахунок ваги соєвого воску та ароматичної олії для свічок. Професійна формула, метод з водою, без похибок.",
-  "keywords":"калькулятор воску, розрахунок воску для свічок, соєвий віск, ароматичні олії, виготовлення свічок, DIY свічки, точний розрахунок воску, формула для свічок",
-  "canonical": "https://aboutcandles.netlify.app/ua/index.html",
-    "uaUrl": "https://aboutcandles.netlify.app/ua/index.html",
-    "enUrl": "https://aboutcandles.netlify.app/en/index.html"
+	"title":"Калькулятор розрахунку воску для соєвих свічок",
+  "description":"Як розрахувати вагу соєвого воску та ароматичної олії для свічки. Точний метод з використанням води для визначення необхідної кількості матеріалів.",
+  "keywords":"калькулятор воску, розрахунок воску для свічок, соєвий віск, ароматичні олії, виготовлення свічок, DIY свічки",
+  "canonical": "https://aboutcandles.netlify.app/ua/",
+    "uaUrl": "https://aboutcandles.netlify.app/ua/waxWeight.html",
+    "enUrl": "https://aboutcandles.netlify.app/en/waxWeight.html"
 	})
-	<body  class="d-flex flex-column min-vh-100">
+	<body class="d-flex flex-column min-vh-100">
 		@@include('html/header.html',{ "lang": "ua" })
 		<main>
 
 
     <div class="container-sm" style="margin-top: 1em;">
         <div  class="noprint">
-          
-        <h1>Калькулятор розрахунку воску та аромаолії для свічок</h1>
-            <div class="visually-hidden">
-        <p>Якщо ви виготовляєте свічки власноруч, вам може знадобитися точний розрахунок кількості воску. Найпростіший спосіб визначити, скільки соєвого воску потрібно для заповнення форми, - це використати воду. У цій статті розповім, як правильно це зробити. Це класичний метод розрахунку кількості воску та аромату, який використовується у свічковарінні, і він базується на стандартних рекомендаціях виробників воску та ароматичних олій. Формула використовується у професійному свічковарінні (це підтверджено в документаціях CandleScience, Lone Star Candle Supply та ін.).</p>
+        <h1>Як розрахувати вагу соєвого воску та ароматичної олії для свічки</h1>
+            <p>Якщо ви виготовляєте свічки власноруч, вам може знадобитися точний розрахунок кількості воску. Найпростіший спосіб визначити, скільки соєвого воску потрібно для заповнення форми, - це використати воду. У цій статті розповім, як правильно це зробити. Це класичний метод розрахунку кількості воску та аромату, який використовується у свічковарінні, і він базується на стандартних рекомендаціях виробників воску та ароматичних олій. Формула використовується у професійному свічковарінні (це підтверджено в документаціях CandleScience, Lone Star Candle Supply та ін.).</p>
             <h2>Що знадобиться?</h2>
             <ul>
             <li>Ємність, у яку буде заливатися розплавлений віск</li>
@@ -48,31 +46,11 @@
                 <li>Деякі виробники ароматичних олій вказують відносну густину олії при порівнянні з густиною води. Наприклад, у виробника CandleScience це вказано у таблиці Safety Data Sheet і називається Specific gravity (H2O=1). Якщо відома відносна густина ароматичної олії - для більш точних розрахунків також вкажіть її. Якщо не відома - то у середньому її величина складає 0,9-1.</li>
                 <li>Внесіть отримані дані у калькулятор нижче та натисніть "Розрахувати":</li>
             </ol>
-            </div>
+            
         <!-- Калькулятор -->
         <div style="display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;gap: 1em; margin-top: 3em; margin-bottom: 1em;">
-
-          <form id="form" class="was-validated " style="max-width: 400px; width: 100%;">
-      
+    <form id="form" class="was-validated" style="max-width: 400px;width: 100%;">
       <div class="mb-3">
-        <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
-        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" required>
-      </div>
-   
-      <div class="mb-3">
-        <label for="intense" class="form-label">Інтенсивність аромату, %</label>
-        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" required>
-      </div>
-
-      <p class="d-inline-flex gap-1">
-
-  <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Додаткові дані
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-       <div class="mb-3">
         <label for="floatingSelectGrid" class="form-label">Вид воску</label>
         <select class="form-select" id="floatingSelectGrid">
           <option selected value="0.86">NatureWax® C-3</option>
@@ -80,49 +58,29 @@
           <option value="0.9">KeraSoy Container 4130</option>
         </select>
       </div>
-         <div class="mb-3">
+      <div class="mb-3">
+        <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
+        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" required>
+      </div>
+      <div class="mb-3">
         <label for="jar-amount" class="form-label">Яка кількість тари, шт</label>
         <input id="jar-amount" type="number" value="1" min="1" max="100" step="1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="intense" class="form-label">Інтенсивність аромату, %</label>
+        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" required>
       </div>
       <div class="mb-3">
         <label for="s" class="form-label">Відносна густина аромату</label>
         <input id="s" type="number" min="0.5" max="1.9" step="0.000001" class="form-control" value="0.98" required>
       </div>
-  </div>
-</div>
-
-
-   
       <div class="mb-3">
         <button id="calculate" disabled  class="btn btn-primary" type="button">Розрахувати</button>
       </div>
     </form>
-   
+  <img src="/img/odesaCandle.png" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Обложка" />
 
-
-
-
-  <img src="/img/candleMaking.png"  aria-hidden="true" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Обложка" />
-
-  
-        </div>
-  
-@@include('html/note.html',{
-          "title":"KeraSoy Pillar 4120:",
-           "heat_temp":"75-85°C",
-           "color_temp":"75°C",
-           "scent_temp":"55-65°C",
-           "pour_temp":"55-65°C"
-         })
-@@include('html/note.html',{
-          "title":"NatureWax® C-3:",
-           "heat_temp":"85°C",
-           "color_temp":"80°C",
-           "scent_temp":"80°C",
-           "pour_temp":"з графіку"
-         })
-        </div>
-
+    </div>
     <!-- Результаты в модальном окне -->
     @@include('html/resultsModal.html',{})
   </div>
@@ -131,5 +89,5 @@
 		</main>
 		@@include('html/footer.html',{})
 
-	</body>
+  </body>
 </html>

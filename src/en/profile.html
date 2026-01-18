@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/head.html',{
+	"title":"Profile",
+  "description":"History of your soy wax and essential oil calculations for candles. Saved data for convenient access and analysis.",
+  "keywords":"calculation history, user profile, soy wax, essential oils, candle making, saved calculations"
+	})
+	<body class="d-flex flex-column min-vh-100">
+		@@include('html/header-en.html',{ "lang": "en" })
+		<main>
+    <div class="container-sm" style="margin-top: 1em;">
+        <h1>Your Calculation History</h1>
+        <p>Below is the history of your soy wax and essential oil calculations for candles. You can review, edit <b>Fragrance</b> and <b>Notes</b>, or delete previous entries as needed.</p>
+    <div class="table-responsive" style="margin-top: 1em;">
+        <table id="historyTable" class="table table-sm table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Container</th>
+              <th>Wax Type</th>
+              <th>% Fragrance</th>
+              <th>Fragrance</th>
+              <th>Fragrance Volume</th>
+              <th>Fragrance Weight</th>
+              <th>Wax Weight</th>
+              <th>Notes</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+    </div>
+
+    
+    </main>
+		@@include('html/footer-en.html',{})
+
+	</body>
+</html>
