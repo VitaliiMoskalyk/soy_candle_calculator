@@ -22,7 +22,8 @@ export const path = {
 		html: `${srcFolder}/**/*.html`, //.pug
 		files: `${srcFolder}/files/**/*.*`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
-		static: `${srcFolder}/static/**/*.*`,
+		static: [`${srcFolder}/static/**/*.*`,`${srcFolder}/img/favicons/**/*.*`],
+		
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
