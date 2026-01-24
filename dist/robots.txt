@@ -1,4 +1,9 @@
 User-agent: *
-Allow: /
+Disallow: /404
+Disallow: /ua/404
+Disallow: /en/404
+Disallow: /profile
+Disallow: /ua/profile
+Disallow: /en/profile
 
 Sitemap: https://aboutcandles.netlify.app/sitemap.xml
