@@ -22,7 +22,7 @@ export const path = {
 		html: `${srcFolder}/**/*.html`, //.pug
 		files: `${srcFolder}/files/**/*.*`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
-		static: [`${srcFolder}/static/**/*.*`,`${srcFolder}/img/favicons/**/*.*`],
+		static: [`${srcFolder}/static/**/*.*`,`${srcFolder}/img/favicons/**/*.*`,`${srcFolder}/static/_redirects`],
 		
 	},
 	watch: {
