@@ -1,53 +1,125 @@
-<header class="container-sm" id="header" style="min-height: 56px;">
-  <nav class="navbar navbar-expand-lg navbar">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/@@lang/">AboutCandles</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<header class="container-sm" id="header" style="min-height:56px;">
+  <nav class="navbar navbar-expand-lg">
 
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/@@lang/waxWeight.html">Wax calculator</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Waxes
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/@@lang/c3.html">Cargill NatureWax® C-3</a></li>
-              <li><a class="dropdown-item" href="/@@lang/kerasoy_pillar_4120.html">KeraSoy Pillar 4120</a></li>
-            </ul>
-          </li>
-           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Wicks
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/@@lang/ww.html">Cotton</a></li>
-            </ul>
-          </li>
-        </ul>
+    <!-- Логотип -->
+    <a class="navbar-brand" href="/@@lang/">AboutCandles</a>
 
+<!-- Авторизация (mobile) -->
+<div class="d-flex align-items-center ms-auto me-2 d-lg-none">
 
-        <!-- Авторизация -->
-        <div class="d-flex align-items-center gap-2">
-          <!-- При авторизованном пользователе -->
-          <div id="user-info" class="d-flex align-items-center gap-2" style="display:none;">
-            <a href="/@@lang/profile.html" id="user-email" class="text-secondary small"></a>
-            <button id="logout" class="btn btn-outline-secondary btn-sm">Sign out</button>
-          </div>
+  <!-- Авторизован (dropdown) -->
+  <div class="user-info dropdown me-2 " style="display:none;">
+    <a
+      href="#"
+      class="text-secondary fs-4 text-decoration-none "
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+      aria-label="User menu">
+      <i class="bi bi-person-circle"></i>
+    </a>
 
-          <!-- При неавторизованном -->
-          <div id="auth-buttons">
-            <button id="login" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal"
-              data-bs-target="#loginModal">Sign in / Sign up</button>
-        </div>
-      </div>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="/@@lang/profile.html">
+          Profile
+        </a>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li>
+        <button class="dropdown-item logout-btn">
+          Sign out
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Не авторизован -->
+  <div class="auth-buttons">
+    <button
+      class="btn btn-outline-primary btn-sm"
+      data-bs-toggle="modal"
+      data-bs-target="#loginModal">
+      Sign in
+    </button>
+  </div>
+
+</div>
+
+    <!-- Бургер -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Меню -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/@@lang/waxWeight.html">
+            Wax calculator
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Waxes
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/@@lang/c3.html">
+                Cargill NatureWax® C-3
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/@@lang/kerasoy_pillar_4120.html">
+                KeraSoy Pillar 4120
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Wicks
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/@@lang/ww.html">
+                Cotton
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Авторизация (ТОЛЬКО DESKTOP) -->
+<div class="d-none d-lg-flex align-items-center gap-2">
+
+  <div id="user-info" class="d-flex align-items-center gap-2" style="display:none;">
+    <a href="/@@lang/profile.html" id="user-email" class="text-secondary small"></a>
+    <button id="logout" class="btn btn-outline-secondary btn-sm">Вийти</button>
+  </div>
+
+  <div id="auth-buttons">
+    <button
+      id="login"
+      class="btn btn-outline-primary btn-sm"
+      data-bs-toggle="modal"
+      data-bs-target="#loginModal">
+      Sign in / Sign up
+    </button>
+  </div>
+
+</div>
+
     </div>
   </nav>
 </header>

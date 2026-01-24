@@ -6,6 +6,12 @@
       display: none !important;
     }
 }
+.auth-loading #user-info,
+.auth-loading #auth-buttons,
+.auth-loading .user-info,
+.auth-loading .auth-buttons {
+  display: none !important;
+}
 
 #header{
   border-bottom: 1px solid grey;
