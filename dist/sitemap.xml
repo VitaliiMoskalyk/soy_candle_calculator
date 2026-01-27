@@ -79,6 +79,19 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- kerasoy_container_4130 -->
+  <url>
+    <loc>https://aboutcandles.pp.ua/ua/kerasoy_container_4130</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>  
+</url>
+  <url>
+    <loc>https://aboutcandles.pp.ua/en/kerasoy_container_4130</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>  
+</url>
   <!-- privacy-policy -->
   <url>
     <loc>https://aboutcandles.pp.ua/ua/privacy-policy</loc>
