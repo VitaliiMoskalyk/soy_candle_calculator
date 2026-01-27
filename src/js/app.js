@@ -68,6 +68,7 @@ document.querySelectorAll(".logout-btn").forEach(btn => {
   const currentLang = getCurrentLang();
 
   // === Слежение за авторизацией ===
+// === Слежение за авторизацией ===
 onAuthStateChanged(auth, async (user) => {
   userLoggedIn = !!user;
 
@@ -103,10 +104,32 @@ onAuthStateChanged(auth, async (user) => {
     userInfoBlocks.forEach(el => el.style.display = "none");
     authButtonsBlocks.forEach(el => el.style.display = "flex");
     userEmailSpans.forEach(el => el.textContent = "");
+
+    // вставляем сообщение + кнопку в таблицу
+    if (tableBody) {
+      tableBody.innerHTML = `
+      <tr>
+        <td colspan="10" style="text-align:center;">
+          <p>${currentLang === "en" ? "Please log in to see your calculation history." : "Будь ласка, увійдіть, щоб побачити історію ваших розрахунків."}</p>
+          <button id="loginTableBtn" class="btn btn-primary btn-sm">
+            ${currentLang === "en" ? "Log In / Register" : "Вхід / Реєстрація"}
+          </button>
+        </td>
+      </tr>
+      `;
+
+      // Вешаем обработчик сразу после вставки кнопки
+      const loginTableBtn = document.getElementById("loginTableBtn");
+      if (loginTableBtn) {
+        loginTableBtn.addEventListener("click", () => {
+          loginBtn.click(); // триггерим существующую кнопку модалки
+        });
+      }
+    }
   }
+
   document.body.classList.remove("auth-loading");
 });
-
 
 
 //   onAuthStateChanged(auth, async (user) => {
@@ -143,6 +166,8 @@ async function handleAuth(email, password) {
 
       const cred = await signInWithEmailAndPassword(auth, email, password);
       console.log("Вход успешен");
+      toastText.textContent=currentLang==='en' ? `Sign in successful.` : `Вхід успішний.`;
+          authToast?.show();
 
       const user = cred.user;
 
@@ -153,11 +178,9 @@ async function handleAuth(email, password) {
       );
 
     } else {
-      alert(
-        currentLang === 'en'
-          ? "Error: " + err.message
-          : "Ошибка: " + err.message
-      );
+       toastText.textContent=currentLang==='en' ? `Error: ${err.message}` : `Помилка: ${err.message}`;
+          authToast?.show();
+      throw err;
     }
   }
 }
@@ -172,11 +195,11 @@ async function handleAuth(email, password) {
       await handleAuth(email, password);
       bootstrap.Modal.getInstance(document.getElementById("loginModal"))?.hide();
     } catch (err) {
-      currentLang==='en' ? alert("Error: " + err.message) :
-      alert("Ошибка: " + err.message);
+      toastText.textContent=currentLang==='en' ? `Error: ${err.message}` : `Помилка: ${err.message}`;
+          authToast?.show();
     }
     finally{
-      location.reload();
+      if (window.location.pathname.endsWith("/profile.html")) {location.reload();}
     }
   });
 
@@ -215,12 +238,12 @@ async function handleSignOut(mobileBtn) {
     }
 
     // Перезагрузка страницы, чтобы синхронизировать состояние
-    location.reload();
+    if (window.location.pathname.endsWith("/profile.html")) {location.reload();}
+    
 
   } catch (err) {
-    currentLang === 'en'
-      ? alert("Logout error: " + err.message)
-      : alert("Помилка виходу: " + err.message);
+    toastText.textContent=currentLang==='en' ? `Error: ${err.message}` : `Помилка: ${err.message}`;
+          authToast?.show();
   }
 }
 
@@ -276,7 +299,7 @@ setupLogout();
         if (!userLoggedIn) {
           toastText.textContent=currentLang==='en' ? `For saving the calculation, you need to log in.` : `Для збереження розрахунку потрібно увійти в систему.`;
           authToast?.show();
-        
+        loginBtn.click();
           return};
         
         if (!user) return;
