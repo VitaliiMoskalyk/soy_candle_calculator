@@ -1,8 +1,3 @@
-@media print {
-  .noprint {
-    display: none !important;
-  }
-}
 .auth-loading #user-info,
 .auth-loading #auth-buttons,
 .auth-loading .user-info,
@@ -20,9 +15,15 @@
 }
 
 .social-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .icon {
@@ -36,4 +37,10 @@
   border-left: 4px solid rgba(255, 235, 59, 0.7176470588);
   padding: 10px;
   font-weight: 600;
+}
+
+@media print {
+  .noprint {
+    display: none !important;
+  }
 }
