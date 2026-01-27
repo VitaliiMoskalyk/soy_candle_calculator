@@ -1,4 +1,9 @@
+# 1️⃣ ЖЁСТКИЙ редирект со старого домена (САМЫЙ ПЕРВЫЙ)
+https://aboutcandles.netlify.app/* https://aboutcandles.pp.ua/:splat 301!
+
+# 2️⃣ 404 для языков
 /en/*  /en/404.html  404
 /ua/*  /ua/404.html  404
+
+# 3️⃣ Общий 404
 /*     /404.html     404
-https://aboutcandles.netlify.app/* https://aboutcandles.pp.ua/:splat 301!
