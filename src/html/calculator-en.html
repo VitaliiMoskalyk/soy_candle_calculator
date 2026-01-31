@@ -1,0 +1,40 @@
+    <form id="form" class="was-validated" style="max-width: 400px;width: 100%;">
+      <div class="mb-3">
+        <label for="floatingSelectGrid" class="form-label">Wax type</label>
+        <select class="form-select" id="floatingSelectGrid">
+                    <option selected value="0.86">NatureWax® C-3</option>
+                    <option value="0.91">KeraSoy Pillar 4120</option>
+                    <option value="0.91">KeraSoy Container 4130</option>
+                    <option value="0.9">Soy wax</option>
+                    <option value="0.91">Palm wax</option>
+                    <option value="0.96">Beeswax</option>
+                    <option value="0.94">Paraffin</option>
+                    <option value="0.97">Carnauba wax</option>
+                    <option value="0.9">Sugar wax</option>
+         </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="jar" class="form-label">Container volume, ml</label>
+        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" placeholder="10-1000" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="jar-amount" class="form-label">Number of containers, pcs</label>
+        <input id="jar-amount" type="number" value="1" min="1" max="100" step="1" class="form-control" placeholder="1-100" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="intense" class="form-label">Intensity of fragrance, %</label>
+        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" placeholder="1-30" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="s" class="form-label">Fragrance specific gravity</label>
+        <input id="s" type="number" min="0.5" max="1.9" step="0.000001" class="form-control" value="0.98" placeholder="0.5-1.9" required>
+      </div>
+
+      <div class="mb-3">
+        <button id="calculate" disabled  class="btn btn-primary" type="button">Calculate</button>
+      </div>
+    </form>

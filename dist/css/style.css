@@ -1,3 +1,8 @@
+:root {
+  --bs-form-invalid-border-color: #e4757581;
+  --bs-form-valid-border-color: #6bc36b81;
+}
+
 .auth-loading #user-info,
 .auth-loading #auth-buttons,
 .auth-loading .user-info,

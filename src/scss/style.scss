@@ -1,11 +1,16 @@
 // @import "fonts";
-
+:root {
+  --bs-form-invalid-border-color:    #e4757581;
+  --bs-form-valid-border-color:      #6bc36b81;
+  
+}
 
 @media print{
     .noprint {
       display: none !important;
     }
 }
+
 .auth-loading #user-info,
 .auth-loading #auth-buttons,
 .auth-loading .user-info,
@@ -20,6 +25,7 @@
     margin-left: 0;
     margin-right: 0;
   }
+  
 .social-link {
   display: inline-flex;
   align-items: center;
@@ -33,7 +39,6 @@
 }
 
 .note{
-
   background-color: #ffffcc9d;
   border-left: 4px solid #ffeb3bb7;
   padding: 10px;

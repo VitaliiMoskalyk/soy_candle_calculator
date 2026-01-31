@@ -1,0 +1,53 @@
+<form id="form" class="was-validated " style="max-width: 400px; width: 100%;">
+      
+      <div class="mb-3">
+        <label for="jar" class="form-label">Container volume, ml</label>
+        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" placeholder="10-1000" required>
+      </div>
+   
+      <div class="mb-3">
+        <label for="intense" class="form-label">Intensity of fragrance, %</label>
+        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" placeholder="1-30" required>
+      </div>
+
+    <p class="d-inline-flex gap-1">
+        <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Additional data</button>
+    </p>
+
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <div class="mb-3">
+                    <label for="floatingSelectGrid" class="form-label">Wax type</label>
+                    <select class="form-select" id="floatingSelectGrid">
+                    <option selected value="0.86">NatureWax® C-3</option>
+                    <option value="0.91">KeraSoy Pillar 4120</option>
+                    <option value="0.91">KeraSoy Container 4130</option>
+                    <option value="0.9">Soy wax</option>
+                    <option value="0.91">Palm wax</option>
+                    <option value="0.96">Beeswax</option>
+                    <option value="0.94">Paraffin</option>
+                    <option value="0.97">Carnauba wax</option>
+                    <option value="0.9">Sugar wax</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="jar-amount" class="form-label">Number of containers, pcs</label>
+                    <input id="jar-amount" type="number" value="1" min="1" max="100" step="1" class="form-control" placeholder="1-100" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="s" class="form-label">Fragrance specific gravity</label>
+                    <input id="s" type="number" min="0.5" max="1.9" step="0.000001" class="form-control" value="0.98" placeholder="0.5-1.9" required>
+                </div>
+            </div>
+        </div>
+
+      <div class="mt-3  justify-content-between d-flex">
+        <button id="calculate" disabled  class="btn btn-primary" type="button">Calculate</button>
+        <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="/@@lang/waxWeight.html">More about the calculator
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg></a>    
+      </div>
+</form>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="uk">
 	@@include('html/head.html',{
-	"title":"Як розрахувати вагу соєвого воску та аромату для свічки – About Candles",
-  "description":"Точний розрахунок ваги соєвого воску та ароматичної олії для свічок. Професійна формула, метод з водою, без похибок. – About Candles",
-  "keywords":"калькулятор воску, розрахунок воску для свічок, соєвий віск, ароматичні олії, виготовлення свічок, DIY свічки, точний розрахунок воску, формула для свічок",
+	"title":"Як розрахувати вагу воску та аромату для свічки – About Candles",
+  "description":"Точний розрахунок ваги воску та ароматичної олії для свічок. Професійна формула, метод з водою, без похибок. – About Candles",
+  "keywords":"калькулятор воску, розрахунок воску для свічок, соєвий віск, кокосовий віск, ароматичні олії, виготовлення свічок, DIY свічки, точний розрахунок воску, формула для свічок",
   "canonical": "https://aboutcandles.pp.ua/ua/",
     "uaUrl": "https://aboutcandles.pp.ua/ua/index.html",
     "enUrl": "https://aboutcandles.pp.ua/en/index.html"
@@ -52,60 +52,12 @@
         <!-- Калькулятор -->
         <div style="display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;gap: 1em; margin-top: 3em; margin-bottom: 1em;">
 
-          <form id="form" class="was-validated " style="max-width: 400px; width: 100%;">
-      
-      <div class="mb-3">
-        <label for="jar" class="form-label">Об'єм одиниці тари, мл</label>
-        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" required>
-      </div>
+@@include('html/calculator_collapsed.html',{lang: "ua"})
    
-      <div class="mb-3">
-        <label for="intense" class="form-label">Інтенсивність аромату, %</label>
-        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" required>
-      </div>
+        <img src="/img/candleMaking.png" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Соєва свічка з ароматом, точний розрахунок воску та аромату" />
 
-      <p class="d-inline-flex gap-1">
-
-  <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Додаткові дані
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-       <div class="mb-3">
-        <label for="floatingSelectGrid" class="form-label">Вид воску</label>
-        <select class="form-select" id="floatingSelectGrid">
-          <option selected value="0.86">NatureWax® C-3</option>
-          <option value="0.9">KeraSoy Pillar 4120</option>
-          <option value="0.9">KeraSoy Container 4130</option>
-        </select>
-      </div>
-         <div class="mb-3">
-        <label for="jar-amount" class="form-label">Яка кількість тари, шт</label>
-        <input id="jar-amount" type="number" value="1" min="1" max="100" step="1" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="s" class="form-label">Відносна густина аромату</label>
-        <input id="s" type="number" min="0.5" max="1.9" step="0.000001" class="form-control" value="0.98" required>
-      </div>
-  </div>
-</div>
-
-
-   
-      <div class="mb-3">
-        <button id="calculate" disabled  class="btn btn-primary" type="button">Розрахувати</button>
-      </div>
-    </form>
-   
-
-
-
-
-  <img src="/img/candleMaking.png" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Соєва свічка з ароматом, точний розрахунок воску та аромату" />
-
-  
         </div>
+
   
 @@include('html/note.html',{
           "title":"KeraSoy Pillar 4120:",

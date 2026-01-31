@@ -4,7 +4,7 @@
   <!-- Главная без языкового префикса -->
   <url>
     <loc>https://aboutcandles.pp.ua/</loc>
-    <lastmod>2026-01-25</lastmod>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,13 +12,13 @@
   <!-- Главная на языках -->
   <url>
     <loc>https://aboutcandles.pp.ua/ua/</loc>
-    <lastmod>2026-01-25</lastmod>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aboutcandles.pp.ua/en/</loc>
-    <lastmod>2026-01-25</lastmod>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -40,13 +40,13 @@
   <!-- waxweight -->
   <url>
     <loc>https://aboutcandles.pp.ua/ua/waxweight</loc>
-    <lastmod>2026-01-25</lastmod>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aboutcandles.pp.ua/en/waxweight</loc>
-    <lastmod>2026-01-25</lastmod>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

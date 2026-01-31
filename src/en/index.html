@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	@@include('html/head-en.html',{
-	"title":"How to calculate the weight of soy wax and fragrance for a candle – About Candles",
-  "description":"Precise calculation of the weight of soy wax and fragrance oil for candles. Professional formula, water method, no errors. – About Candles",
-  "keywords":"wax calculator, candle wax calculation, soy wax, fragrance oils, candle making, DIY candles, precise wax calculation, candle formula",
+	"title":"How to calculate the weight of wax and fragrance for a candle – About Candles",
+  "description":"Precise calculation of the weight of wax and fragrance oil for candles. Professional formula, water method, no errors. – About Candles",
+  "keywords":"wax calculator, candle wax calculation, soy wax, coconut wax, fragrance oils, candle making, DIY candles, precise wax calculation, candle formula",
   "canonical": "https://aboutcandles.pp.ua/en/",
   "uaUrl": "https://aboutcandles.pp.ua/ua/index.html",
   "enUrl": "https://aboutcandles.pp.ua/en/index.html"
 	})
+
 	<body  class="d-flex flex-column min-vh-100 auth-loading">
 		@@include('html/header-en.html',{ "lang": "en" })
 		<main>
@@ -52,59 +54,10 @@ The calculation is based on the formula used by professional manufacturers (Cand
         <!-- Калькулятор -->
         <div style="display: flex;justify-content: space-around;align-items: center;flex-wrap: wrap;gap: 1em; margin-top: 3em; margin-bottom: 1em;">
 
-          <form id="form" class="was-validated " style="max-width: 400px; width: 100%;">
-      
-      <div class="mb-3">
-        <label for="jar" class="form-label">Container volume, ml</label>
-        <input id="jar" type="number" min="10" max="1000" step="1" class="form-control" required>
-      </div>
+@@include('html/calculator_collapsed-en.html',{lang: "en"})
    
-      <div class="mb-3">
-        <label for="intense" class="form-label">Intensity of fragrance, %</label>
-        <input id="intense" type="number" min="1" max="30" step="0.1" class="form-control" required>
-      </div>
-
-      <p class="d-inline-flex gap-1">
-
-  <button class="btn btn-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Additional data
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-       <div class="mb-3">
-        <label for="floatingSelectGrid" class="form-label">Wax type</label>
-        <select class="form-select" id="floatingSelectGrid">
-          <option selected value="0.86">NatureWax® C-3</option>
-          <option value="0.9">KeraSoy Pillar 4120</option>
-          <option value="0.9">KeraSoy Container 4130</option>
-        </select>
-      </div>
-         <div class="mb-3">
-        <label for="jar-amount" class="form-label">Number of Containers</label>
-        <input id="jar-amount" type="number" value="1" min="1" max="100" step="1" class="form-control" required>
-      </div>
-      <div class="mb-3">
-        <label for="s" class="form-label">Fragrance specific gravity</label>
-        <input id="s" type="number" min="0.5" max="1.9" step="0.000001" class="form-control" value="0.98" required>
-      </div>
-  </div>
-</div>
-
-
-   
-      <div class="mb-3">
-        <button id="calculate" disabled  class="btn btn-primary" type="button">Calculate</button>
-      </div>
-    </form>
-   
-
-
-
-
   <img src="/img/candleMaking.png" style="max-width: 400px;" width="100%" class="img-fluid rounded" alt="Handmade soy candle with fragrance, precise wax and fragrance calculation" />
 
-  
         </div>
   
 @@include('html/note.html',{
