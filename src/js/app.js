@@ -334,6 +334,7 @@ function renderTable(history) {
     const r = item.result;
 
     const row = document.createElement("tr");
+  
     row.innerHTML = `
       <td>${index + 1}</td>
       <td  data-field="jarValue">${r.jarValue} ${currentLang === "en" ? "ml" : "мл"}\n${r.jarAmount} ${currentLang === "en" ? "pcs" : "шт"}</td>
@@ -351,6 +352,7 @@ function renderTable(history) {
         </button></td>
     `;
 
+    
     tableBody.appendChild(row);
   });
 

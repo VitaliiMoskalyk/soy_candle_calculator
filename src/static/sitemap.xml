@@ -3,7 +3,7 @@
   
   <!-- Главная без языкового префикса -->
   <url>
-    <loc>https://aboutcandles.pp.ua/</loc>
+    <loc>https://aboutcandles.netlify.app/</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,13 +11,13 @@
 
   <!-- Главная на языках -->
   <url>
-    <loc>https://aboutcandles.pp.ua/ua/</loc>
+    <loc>https://aboutcandles.netlify.app/ua/</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aboutcandles.pp.ua/en/</loc>
+    <loc>https://aboutcandles.netlify.app/en/</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -25,13 +25,13 @@
 
   <!-- c3 -->
   <url>
-    <loc>https://aboutcandles.pp.ua/ua/c3</loc>
+    <loc>https://aboutcandles.netlify.app/ua/c3</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aboutcandles.pp.ua/en/c3</loc>
+    <loc>https://aboutcandles.netlify.app/en/c3</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -39,13 +39,13 @@
 
   <!-- waxweight -->
   <url>
-    <loc>https://aboutcandles.pp.ua/ua/waxweight</loc>
+    <loc>https://aboutcandles.netlify.app/ua/waxweight</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aboutcandles.pp.ua/en/waxweight</loc>
+    <loc>https://aboutcandles.netlify.app/en/waxweight</loc>
     <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -53,13 +53,13 @@
 
   <!-- ww -->
   <url>
-    <loc>https://aboutcandles.pp.ua/ua/ww</loc>
+    <loc>https://aboutcandles.netlify.app/ua/ww</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aboutcandles.pp.ua/en/ww</loc>
+    <loc>https://aboutcandles.netlify.app/en/ww</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -67,13 +67,13 @@
 
   <!-- kerasoy_pillar_4120 -->
   <url>
-    <loc>https://aboutcandles.pp.ua/ua/kerasoy_pillar_4120</loc>
+    <loc>https://aboutcandles.netlify.app/ua/kerasoy_pillar_4120</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aboutcandles.pp.ua/en/kerasoy_pillar_4120</loc>
+    <loc>https://aboutcandles.netlify.app/en/kerasoy_pillar_4120</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -81,26 +81,26 @@
 
   <!-- kerasoy_container_4130 -->
   <url>
-    <loc>https://aboutcandles.pp.ua/ua/kerasoy_container_4130</loc>
+    <loc>https://aboutcandles.netlify.app/ua/kerasoy_container_4130</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>  
 </url>
   <url>
-    <loc>https://aboutcandles.pp.ua/en/kerasoy_container_4130</loc>
+    <loc>https://aboutcandles.netlify.app/en/kerasoy_container_4130</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>  
 </url>
   <!-- privacy-policy -->
   <url>
-    <loc>https://aboutcandles.pp.ua/ua/privacy-policy</loc>
+    <loc>https://aboutcandles.netlify.app/ua/privacy-policy</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aboutcandles.pp.ua/en/privacy-policy</loc>
+    <loc>https://aboutcandles.netlify.app/en/privacy-policy</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -108,13 +108,13 @@
 
   <!-- terms -->
   <url>
-    <loc>https://aboutcandles.pp.ua/ua/terms</loc>
+    <loc>https://aboutcandles.netlify.app/ua/terms</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://aboutcandles.pp.ua/en/terms</loc>
+    <loc>https://aboutcandles.netlify.app/en/terms</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

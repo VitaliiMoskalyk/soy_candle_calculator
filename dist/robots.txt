@@ -6,4 +6,4 @@ Disallow: /profile
 Disallow: /ua/profile
 Disallow: /en/profile
 
-Sitemap: https://aboutcandles.pp.ua/sitemap.xml
+Sitemap: https://aboutcandles.netlify.app/sitemap.xml
